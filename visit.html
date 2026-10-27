@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>Visit — L'OUBLIETTE</title>
+  <meta name="description" content="Plan your visit to L'Oubliette: how to get down the sixty-three steps, the night hours, where the door is under the Cour Carrée, and a ticket you can tear." />
+  <meta name="theme-color" content="#0e0b0a" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Monsieur+La+Doulaise&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261027-3" />
+  <link rel="stylesheet" href="css/visit.css?v=20261027-3" />
+</head>
+<body class="is-loading" data-page="visit">
+
+  <!-- ================= LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-word sc">Visíte</p>
+    <span class="ld-line"><i id="ldBar"></i></span>
+    <p class="ld-depth">descending &nbsp;<b id="ldDepth">−00</b> m</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__lens"></i><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= HEADER + RAILS ================= -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="logo" aria-label="L'Oubliette home">L'Oubliette<br />Paris</a>
+    <a href="#ticket" class="hdr__more" data-jump data-cursor="one memory">Tickets</a>
+    <button class="hdr__menu" id="menuBtn" aria-expanded="false" aria-controls="menu" data-cursor="open"><i></i><i></i><i></i><span>menu</span></button>
+  </header>
+  <div class="rail rail--l" aria-hidden="true"><span class="rail__name" id="railName">Visíte</span><i class="rail__line"></i></div>
+  <div class="rail rail--yrs" aria-hidden="true">22:00 — 06:00</div>
+  <div class="rail rail--r" aria-hidden="true">Your visit</div>
+
+  <!-- ================= MENU ================= -->
+  <nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
+    <p class="menu__ghost" aria-hidden="true">Menu</p>
+    <button class="menu__close" id="menuClose" data-cursor="close">✕ <span>Close</span></button>
+    <ul class="menu__main">
+      <li><a href="index.html">Home</a><small>back up the stairs</small></li>
+      <li><a href="refused.html">Refusés</a><small>everything they sent back</small></li>
+      <li><a href="stolen.html">Volés</a><small>cut from their frames</small></li>
+      <li><a href="hidden.html">Cachés</a><small>painted over, still there</small></li>
+      <li><a href="keepers.html">Gardiens</a><small>three borzois, one key</small></li>
+    </ul>
+    <div class="menu__side">
+      <a href="#ticket" data-jump>Buy your tickets</a>
+      <a href="#down" data-jump>Getting down</a>
+      <a href="#hours" data-jump>Hours</a>
+      <a href="#contacts" data-jump>Contacts</a>
+      <p class="menu__hist">Visíte</p>
+      <p class="menu__guide">Before you come</p>
+      <ol class="menu__list">
+        <li>bring a candle, or a phone</li>
+        <li>leave your dog upstairs</li>
+        <li>forget something on the way out</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ========== 01 HERO: the göteborg cover ========== -->
+    <section class="vhero" id="vhero" data-rail="Visíte">
+      <div class="vhero__bg"><div class="slot" data-img="img/VISIT/hero.jpg" data-pos="50% 50%" data-label="VISIT/hero.jpg · Hubert Robert, Imaginary View of the Grande Galerie in the Louvre in Ruins, 1796"></div></div>
+      <div class="vhero__c">
+        <p class="vhero__pre">Plan your</p>
+        <h1 class="vhero__title sc" data-split>Visíte</h1>
+        <p class="vhero__sub">Fourteen metres under the Cour Carrée</p>
+        <p class="vhero__dates">22:00 · 06:00</p>
+      </div>
+      <nav class="vhero__links" aria-label="On this page">
+        <a href="#down" data-jump data-mag><span>Getting down</span><small>63 steps</small></a>
+        <a href="#hours" data-jump data-mag><span>Hours</span><small id="vNow">open tonight</small></a>
+        <a href="#ticket" data-jump data-mag><span>Buy your tickets</span><small>one memory</small></a>
+      </nav>
+      <p class="vhero__cap">Hubert Robert painted the Louvre’s Grande Galerie in ruins in 1796, while he was one of its curators.<br />We took it as a floor plan.</p>
+      <p class="vhero__ghost sc" aria-hidden="true">Descénte</p>
+    </section>
+
+    <!-- ========== 02 GETTING DOWN: the dark rembrandt "about" split ========== -->
+    <section class="vdown" id="down" data-rail="Descénte">
+      <div class="vdown__pic">
+        <div class="vdown__sticky">
+          <div class="slot" data-img="img/VISIT/stairs.jpg" data-pos="50% 40%" data-label="VISIT/stairs.jpg · Piranesi, The Drawbridge, Carceri d'invenzione, plate VII" data-cursor="not to scale"></div>
+          <p class="vdown__name sc">Piranesi<small>Rome</small></p>
+          <p class="vdown__yrs">1750 — 1761</p>
+          <p class="vdown__count"><b id="stepN">00</b><span>/ 63 steps</span></p>
+        </div>
+      </div>
+      <div class="vdown__txt">
+        <h2 class="vdown__title" data-split>Descénte</h2>
+        <p class="vdown__lead">Piranesi drew these prisons around 1750, out of nothing, and every one of them is mostly stairs. Ours are fewer and less dramatic. Sixty-three steps, one landing, one door, and three dogs at the bottom who will want to know why you came.</p>
+        <ol class="vdown__steps" id="steps">
+          <li data-n="01"><b>Find the Cour Carrée.</b> The square courtyard at the old end of the Louvre, the one without a pyramid. If you can see the pyramid, turn around.</li>
+          <li data-n="12"><b>Find the door marked “staff only”.</b> There are eleven. Ours is the one nobody is guarding.</li>
+          <li data-n="24"><b>Go down.</b> The light goes first. After the twentieth step it is candles, and after the fortieth it is mostly the candle you brought.</li>
+          <li data-n="40"><b>Stop at the landing.</b> There is a chair. It was refused by the Salon of 1863. Do not sit on it.</li>
+          <li data-n="52"><b>Say nothing.</b> Sound carries down here and the hidden wing is trying to sleep.</li>
+          <li data-n="63"><b>Meet the keepers.</b> One of them will lean on you. This is the ticket check.</li>
+        </ol>
+        <p class="vdown__note">There is no lift. There was one in 1989. It was refused.</p>
+      </div>
+    </section>
+
+    <!-- ========== 03 HOURS: the cream "about" with the painting bleeding through ========== -->
+    <section class="vhours" id="hours" data-rail="Hours">
+      <div class="vhours__bleed" aria-hidden="true"><div class="slot" data-img="img/VISIT/candle.jpg" data-pos="60% 40%" data-label=""></div></div>
+      <div class="vhours__lamp" id="lamp" aria-hidden="true"><div class="slot" data-img="img/VISIT/candle.jpg" data-pos="60% 40%" data-label=""></div></div>
+      <figure class="vhours__card">
+        <div class="slot" data-img="img/VISIT/candle.jpg" data-pos="50% 40%" data-label="VISIT/candle.jpg · Georges de La Tour, The Magdalen with the Smoking Flame, c. 1640" data-cursor="mind the flame"></div>
+        <figcaption><span class="sc">La Tour</span><small>Lorraine</small><i>c. 1640</i></figcaption>
+      </figure>
+      <div class="vhours__txt">
+        <p class="vhours__k">Hours in Paris</p>
+        <h2 class="vhours__title" data-split>Hours</h2>
+        <p class="vhours__status"><i class="vhours__flame" id="flame"></i><span>Paris, <b data-clock>00:00</b> · the door is <b id="doorState">closed</b></span></p>
+        <p class="vhours__body">The Oubliette opens when the Louvre closes and closes when the cleaners arrive. Georges de La Tour painted by one candle, and so do we: the whole museum is lit like this painting, which is to say barely, and only the parts you are looking at.</p>
+        <table class="vhours__table">
+          <tr><th>Every night</th><td>22:00 — 06:00</td></tr>
+          <tr><th>Last descent</th><td>05:00, the keepers are tired</td></tr>
+          <tr><th>Closed</th><td>on the days you remember</td></tr>
+          <tr><th>Full moon</th><td>open late, the borzois insist</td></tr>
+        </table>
+        <p class="vhours__aside" id="hoursLeft">—</p>
+      </div>
+    </section>
+
+    <!-- ========== 04 CONTACTS: the göteborg map screen ========== -->
+    <section class="vmap" id="contacts" data-rail="Contacts">
+      <div class="vmap__side">
+        <p class="vmap__rail" aria-hidden="true">Contacts</p>
+        <h2 class="vmap__title" data-split>Contacts</h2>
+        <p class="vmap__where sc">Paris, Cour Carrée<br />France, −14 m</p>
+        <dl class="vmap__info">
+          <div><dt>Métro</dt><dd>Palais Royal — Musée du Louvre, lines 1 and 7. Then down.</dd></div>
+          <div><dt>Phone</dt><dd>There is no phone. There is a bell. Rancune answers it.</dd></div>
+          <div><dt>Post</dt><dd>Write to the Louvre and ask for something they no longer have. It finds its way here.</dd></div>
+          <div><dt>Lost &amp; found</dt><dd>Everything is lost. Nothing is found. That is rather the point.</dd></div>
+        </dl>
+        <p class="vmap__yrs" aria-hidden="true">1739 — today</p>
+      </div>
+      <div class="vmap__map" data-cursor="drag the city">
+        <div class="vmap__plan" id="plan">
+          <div class="slot" data-img="img/VISIT/map.jpg" data-label="VISIT/map.jpg · Plan de Turgot, the Louvre and the Tuileries, 1739"></div>
+          <svg class="vmap__route" viewBox="0 0 100 68" preserveAspectRatio="none" aria-hidden="true"><path d="M98 64C80 58 66 50 52 37S30 16 21 10.2" pathLength="1" /></svg>
+          <div class="vmap__pin" style="--x:21%;--y:15%"><i></i><span class="sc">Cour Carrée</span><small>−14 m, roughly here</small></div>
+        </div>
+        <p class="vmap__cap">Plan de Turgot, 1739. The Louvre is still missing a wing. We are under the part that was already there.</p>
+      </div>
+    </section>
+
+    <!-- ========== 05 TICKET: a stub you can tear ========== -->
+    <section class="vtix" id="ticket" data-rail="Billet">
+      <div class="vtix__head">
+        <p class="vtix__k">Admission</p>
+        <h2 class="vtix__title"><span class="script">Billet</span></h2>
+        <p class="vtix__lead">Pick a night and a keeper to walk you down. Admission is one thing you’d like to forget, paid at the bottom of the stairs. Tickets are not refundable, and after a while not even remembered.</p>
+      </div>
+      <div class="vtix__grid">
+        <div class="vtix__form">
+          <p class="vtix__q">01 · Which night</p>
+          <div class="vtix__nights" id="nights" role="radiogroup" aria-label="night"></div>
+          <p class="vtix__q">02 · Who walks you down</p>
+          <div class="vtix__keepers" role="radiogroup" aria-label="keeper">
+            <button class="is-on" data-k="Oubli" role="radio" aria-checked="true">Oubli<small>the head keeper. no small talk.</small></button>
+            <button data-k="Rancune" role="radio" aria-checked="false">Rancune<small>remembers your face. forever.</small></button>
+            <button data-k="Pardon" role="radio" aria-checked="false">Pardon<small>two dogs. one of them will sit on you.</small></button>
+          </div>
+          <p class="vtix__q">03 · How many of you</p>
+          <div class="vtix__qty"><button id="qtyDn" aria-label="fewer">−</button><b id="qty">1</b><button id="qtyUp" aria-label="more">+</button></div>
+        </div>
+        <div class="vtix__ticket" id="tk">
+          <div class="vtix__main">
+            <p class="vtix__brand sc">L'Oubliétte</p>
+            <p class="vtix__adm">admit <b id="tkQty">one</b></p>
+            <p class="vtix__night" id="tkNight">tonight</p>
+            <p class="vtix__time">doors 22:00 · last descent 05:00</p>
+            <p class="vtix__with">walked down by <b id="tkKeeper">Oubli</b></p>
+            <p class="vtix__no">Nº <b id="tkNo">0000</b></p>
+          </div>
+          <div class="vtix__stub" id="tkStub">
+            <p class="sc">−14 m</p>
+            <p class="vtix__price">one<br />memory</p>
+            <p class="vtix__no2" id="tkNo2">0000</p>
+          </div>
+        </div>
+      </div>
+      <div class="vtix__act">
+        <button class="vtix__tear" id="tear" data-mag data-cursor="tear it"><span>Tear the stub</span></button>
+        <p class="vtix__done" id="tkDone" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ========== 06 THANKS: the göteborg last screen, the phone with the hero inside ========== -->
+    <section class="vthx" id="thanks" data-rail="Merci">
+      <a class="vthx__phone" href="index.html" data-cursor="back upstairs">
+        <div class="slot" data-img="img/VISIT/gallery.jpg" data-pos="50% 50%" data-label="VISIT/gallery.jpg · Hubert Robert, Design for the Grande Galerie of the Louvre, 1796"></div>
+        <span class="vthx__logo">L'Oubliette<br />Paris</span>
+        <span class="vthx__in sc">Upstairs</span>
+        <span class="vthx__go">back up ↑</span>
+      </a>
+      <p class="vthx__cap">The same gallery, the same year, the same painter: this time not in ruins. Upstairs, it is still open.</p>
+      <h2 class="vthx__title" data-split>Thanks for forgetting!</h2>
+    </section>
+
+    <!-- ========== FOOTER: persephone ========== -->
+    <footer class="ft">
+      <div class="ft__poster">
+        <div class="ft__pic"><div class="slot" data-img="img/HOME/footer.jpg" data-pos="50% 25%" data-label="HOME/footer.jpg · Rossetti, Proserpine, 1874" data-cursor="eight attempts"></div></div>
+        <div class="ft__col">
+          <span class="ft__star" aria-hidden="true">✦</span>
+          <div class="ft__cols">
+            <ul class="ft__side" aria-hidden="true"><li>refused</li><li>○</li><li>stolen</li><li>○</li><li>hidden</li><li>○</li><li>kept</li></ul>
+            <p class="ft__word script">l'oubliette</p>
+            <ul class="ft__side" aria-hidden="true"><li>upstairs</li><li>○</li><li>and</li><li>○</li><li>down</li><li>○</li><li>here</li></ul>
+          </div>
+          <span class="ft__star" aria-hidden="true">✦</span>
+        </div>
+      </div>
+      <div class="ft__grid">
+        <div><p class="ft__k">The museum</p><a href="index.html">Home</a><a href="refused.html">The refused</a><a href="stolen.html">The stolen</a><a href="hidden.html">The hidden</a><a href="keepers.html">The keepers</a></div>
+        <div><p class="ft__k">Your visit</p><a href="#down" data-jump>Getting down</a><a href="#hours" data-jump>Hours</a><a href="#contacts" data-jump>Contacts</a><a href="#ticket" data-jump>Tickets</a></div>
+        <div><p class="ft__k">Paris, upstairs</p><span class="ft__clock" data-clock>00:00</span><span id="doors">the candles are lit.</span></div>
+        <div class="ft__up"><a href="#top" data-jump data-cursor="back up">Back up the stairs ↑</a></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 L'Oubliette — a concept. the paintings are real, the dogs are real. the museum isn't.</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261027-3"></script>
+  <script src="js/visit.js?v=20261027-3"></script>
+</body>
+  <!--
+   *    /\_/\      ✦
+       ( o.o )   <3  ghostly.grl
+   ✦    > ^ <   🕯     *
+-->
+</html>

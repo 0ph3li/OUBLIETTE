@@ -1,0 +1,149 @@
+/* =========================================================
+   L'OUBLIETTE — keepers.css
+   the keepers: the vidahen collage on the stairs, the epictetus room, the mirrored night shift, the painted ancestors
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+.slot[data-flip] > img { transform: scaleX(-1); }
+
+/* ========== 01 HERO: the collage over the spiral stairs ========== */
+.khero { position: relative; height: 100svh; min-height: 720px; overflow: hidden; background: #2a2a2a; color: #f4efe8; }
+.khero__stair { position: absolute; inset: -6%; }
+.khero__stair .slot { position: absolute; inset: 0; background: #3a3a3a; }
+.khero__stair .slot > img { filter: grayscale(1) contrast(1.4) brightness(.5); }
+.khero__stair::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 45% 55%, rgba(10, 9, 9, .15) 20%, rgba(10, 9, 9, .7) 100%); }
+.khero__card { position: absolute; z-index: 2; overflow: hidden; box-shadow: 0 30px 70px rgba(0, 0, 0, .5); }
+.khero__card .slot { position: absolute; inset: 0; }
+.khero__card--top { left: 21vw; top: 21svh; width: 38vw; aspect-ratio: 1.45; background: #111; }
+.khero__card--low { left: 11vw; top: 47svh; z-index: 1; width: 24vw; aspect-ratio: .82; }
+.khero__card--low .slot > img { filter: sepia(.35) saturate(1.2) brightness(.8) hue-rotate(-10deg); }
+.khero__swash { position: absolute; left: 8vw; top: 15svh; z-index: 3; width: 26vw; overflow: visible; fill: none; stroke: #f4efe8; stroke-width: 1.6; stroke-linecap: round; }
+.khero__key { position: absolute; right: 23vw; top: 44svh; z-index: 3; width: clamp(60px, 7vw, 110px); transform: rotate(-14deg); fill: #c9963f; stroke: #f0cf86; stroke-width: 2; filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .55)); }
+.khero__key circle:nth-of-type(2) { fill: #2a2a2a; }
+.khero__key .g { fill: #6e0f14; stroke: #f0cf86; }
+.khero__title { position: absolute; left: 30vw; top: 61svh; z-index: 3; display: flex; align-items: baseline; font-weight: 400; line-height: 1; white-space: nowrap; }
+.khero__title .script { font-size: clamp(120px, 14vw, 250px); margin-right: -.18em; line-height: .8; }
+.khero__rest { font-family: var(--f-disp); font-size: clamp(44px, 6.4vw, 116px); text-transform: uppercase; letter-spacing: -.01em; transform: scaleX(.78); transform-origin: left; }
+.khero__txt { position: absolute; left: 39vw; top: calc(61svh + clamp(44px, 6.4vw, 116px) + 22px); z-index: 3; max-width: 46ch; font-family: var(--f-disp); font-size: clamp(12px, 1vw, 15px); line-height: 1.5; color: rgba(244, 239, 232, .92); text-shadow: 0 2px 12px rgba(0, 0, 0, .6); }
+.khero__depth { position: absolute; right: 8vw; bottom: 6svh; z-index: 3; font-size: 10px; text-transform: uppercase; letter-spacing: .18em; color: rgba(244, 239, 232, .75); }
+.khero__depth b { font-family: var(--f-disp); font-weight: 400; font-size: 28px; letter-spacing: 0; }
+
+/* ========== 02 THE KEEPERS: the epictetus room ========== */
+.kroom { position: relative; height: 100svh; min-height: 720px; overflow: hidden; color: #f1e8dc; background: radial-gradient(ellipse 60% 80% at 25% 45%, #4a3829 0%, #241a14 50%, #0e0b0a 100%); }
+.kroom__lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.kroom__lines path { fill: none; stroke: rgba(241, 232, 220, .4); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.kroom__logo { position: absolute; left: 8vw; top: 12svh; z-index: 3; display: flex; align-items: center; gap: 8px; font-size: 9px; font-weight: 600; line-height: 1.05; letter-spacing: .04em; }
+.kroom__logo b { padding-right: 8px; border-right: 2px solid currentColor; font-family: var(--f-disp); font-size: 34px; font-weight: 400; line-height: .9; }
+.kroom__orb { position: absolute; left: 7vw; top: 54%; z-index: 2; width: min(42vw, 70svh); aspect-ratio: 1; transform: translateY(-50%); }
+.kroom__ring { position: absolute; inset: -5%; border: 1px solid rgba(241, 232, 220, .3); border-radius: 50%; }
+.kroom__ring::after { content: ''; position: absolute; left: 50%; top: -4px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--gold-2); }
+.kroom__pics { position: absolute; inset: 0; overflow: hidden; border-radius: 50%; background: #2a1f18; box-shadow: inset 0 0 80px rgba(0, 0, 0, .6); }
+.kroom__pic { position: absolute; inset: 0; opacity: 0; transform: scale(1.08); transition: opacity 1s var(--ease), transform 1.4s var(--ease); }
+.kroom__pic.is-on { opacity: 1; transform: none; }
+.kroom__pic .slot { position: absolute; inset: 0; }
+.kroom__pic .slot > img { filter: sepia(.25) contrast(1.05); }
+.kroom__aside { margin-top: 22px; padding-top: 14px; border-top: 1px solid rgba(241, 232, 220, .2); font-family: var(--f-disp); font-size: 13px; line-height: 1.55; color: rgba(241, 232, 220, .72); }
+.kroom__tabs { position: absolute; right: 8vw; top: 12svh; z-index: 3; display: flex; gap: clamp(20px, 3vw, 46px); }
+.kroom__tabs button { position: relative; padding: 4px 0; font-family: var(--f-disp); font-size: 13px; color: rgba(241, 232, 220, .55); transition: color .4s; }
+.kroom__tabs button::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease); }
+.kroom__tabs button.is-on, .kroom__tabs button:hover { color: #f1e8dc; }
+.kroom__tabs button.is-on::after { transform: scaleX(1); }
+.kroom__txt { position: absolute; left: 56vw; top: 28svh; z-index: 3; width: min(34vw, 520px); }
+.kroom__name { font-family: var(--f-disp); font-weight: 400; font-size: clamp(64px, 6.6vw, 120px); line-height: 1; }
+.kroom__role { margin: 10px 0 26px; font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: var(--gold-2); }
+.kroom__body { min-height: 5.6em; font-family: var(--f-disp); font-size: clamp(16px, 1.4vw, 21px); line-height: 1.45; }
+.kroom__sub { margin-top: 14px; font-size: 12px; line-height: 1.6; color: rgba(241, 232, 220, .62); }
+.kroom__thumbs { position: absolute; left: 56vw; bottom: 11svh; z-index: 3; display: flex; align-items: center; gap: 14px; }
+.kroom__arr { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid rgba(241, 232, 220, .6); border-radius: 50%; font-size: 16px; line-height: 1; color: #f1e8dc; transition: background .4s, color .4s; }
+.kroom__arr:hover { background: #f1e8dc; color: #1a130f; }
+.kroom__th { position: relative; width: 58px; height: 58px; padding: 0; border-radius: 8px; overflow: hidden; opacity: .55; transition: opacity .5s, transform .6s var(--ease), box-shadow .5s; }
+.kroom__th .slot { position: absolute; inset: 0; }
+.kroom__th .slot-label { display: none; }
+.kroom__th.is-on { opacity: 1; transform: scale(1.22); box-shadow: 0 0 0 1px rgba(241, 232, 220, .5), 0 12px 30px rgba(0, 0, 0, .5); }
+
+/* ========== 03 THE NIGHT SHIFT: two halves, one upside down ========== */
+.night { position: relative; background: #000; }
+.night__half { position: relative; height: 56svh; min-height: 380px; overflow: hidden; }
+.night__half .slot { position: absolute; inset: -6% 0; background: #000; }
+.night__half .slot > img { filter: grayscale(1) contrast(1.2) brightness(.95); }
+.night__half--b { border-top: 1px solid rgba(255, 255, 255, .25); }
+.night__half--b .slot { transform: rotate(180deg); }
+.night__k { position: absolute; z-index: 2; font-size: 10px; text-transform: uppercase; letter-spacing: .24em; color: rgba(255, 255, 255, .7); transition: color .6s; }
+.night__half--a .night__k { left: 8vw; top: 12svh; }
+.night__half--b .night__k { right: 8vw; bottom: 8svh; }
+.night__half.is-watch .night__k { color: var(--gold-2); }
+.night__half.is-watch .night__k::before { content: '● '; }
+.night__mid {
+  position: absolute; left: 50%; top: 56svh; z-index: 3; width: min(560px, 86vw); padding: 30px 34px; transform: translate(-50%, -50%); text-align: center; color: #f4efe8;
+  background: rgba(0, 0, 0, .38); border: 1px solid rgba(255, 255, 255, .16); backdrop-filter: blur(16px) saturate(1.1); -webkit-backdrop-filter: blur(16px) saturate(1.1);
+}
+.night__title { display: flex; justify-content: center; align-items: baseline; gap: 14px; line-height: 1; }
+.night__title .sc { font-size: clamp(28px, 3vw, 44px); }
+.night__title .script { font-size: clamp(64px, 6.6vw, 110px); line-height: 1.1; color: var(--rose); }
+.night__now { margin: 6px 0 14px; font-size: 10px; text-transform: uppercase; letter-spacing: .16em; color: rgba(244, 239, 232, .75); }
+.night__now b { font-weight: 500; color: var(--gold-2); }
+.night__txt { font-size: 12.5px; line-height: 1.65; color: rgba(244, 239, 232, .82); }
+
+/* ========== 04 ANCESTORS: too close, then the whole painting ========== */
+.anc { position: relative; background: #0d0a09; color: var(--bone); }
+.anc__pin { position: relative; height: 100svh; min-height: 640px; overflow: hidden; }
+.anc__k { position: absolute; left: 8vw; top: 11svh; z-index: 3; font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); }
+.anc__stage { position: absolute; inset: 0; }
+.anc__fig { position: absolute; left: 50%; top: 46%; margin: 0; width: var(--fw, 60vw); aspect-ratio: var(--ar, 1.4); opacity: 0; transform-origin: var(--o, 50% 50%); transition: opacity .7s var(--ease); will-change: transform; }
+.anc__fig.is-on { opacity: 1; z-index: 1; }
+.anc__fig .slot { position: absolute; inset: 0; }
+.anc__cap { position: absolute; left: 8vw; bottom: 8svh; z-index: 3; max-width: 34ch; padding: 18px 20px; background: rgba(13, 10, 9, .45); border: 1px solid rgba(243, 230, 220, .16); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.anc__n { font-size: 10px; letter-spacing: .14em; color: var(--mute); }
+.anc__n b { font-weight: 500; color: var(--bone); }
+.anc__t { margin: 6px 0 4px; font-family: var(--f-disp); font-weight: 400; font-size: clamp(20px, 1.9vw, 28px); line-height: 1.15; }
+.anc__by { font-size: 11px; color: var(--gold-2); }
+.anc__note { margin-top: 8px; font-size: 11.5px; line-height: 1.55; color: rgba(243, 230, 220, .7); }
+.anc__hint { position: absolute; right: 8vw; bottom: 8svh; z-index: 3; font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: rgba(243, 230, 220, .6); }
+
+/* ========== responsive ========== */
+@media (max-width: 860px) {
+  .khero__card--top { left: 10vw; top: 17svh; width: 80vw; }
+  .khero__card--low { left: 6vw; top: 42svh; width: 44vw; }
+  .khero__swash { left: 2vw; top: 12svh; width: 56vw; }
+  .khero__key { right: 10vw; top: 44svh; width: 54px; }
+  .khero__title { left: 8vw; top: 60svh; }
+  .khero__title .script { font-size: 30vw; }
+  .khero__rest { font-size: 14vw; }
+  .khero__title { top: 54svh; }
+  .khero__txt { left: 8vw; right: 8vw; top: calc(54svh + 32vw); max-width: none; font-size: 12px; }
+  .khero__depth { display: none; }
+
+  .kroom { height: auto; min-height: 0; padding: 110px 7vw 70px; display: flex; flex-direction: column; gap: 26px; }
+  .kroom__logo, .kroom__orb, .kroom__tabs, .kroom__txt, .kroom__thumbs { position: relative; inset: auto; transform: none; }
+  .kroom__orb { width: 82vw; margin: 10px auto 0; }
+  .kroom__tabs { order: 3; gap: 22px; }
+  .kroom__txt { order: 4; width: auto; }
+  .kroom__thumbs { order: 5; }
+
+  .night__half { height: 50svh; min-height: 300px; }
+  .night__mid { top: 50svh; padding: 22px 20px; }
+  .night__half--a .night__k { top: 90px; }
+
+  .anc__fig { top: 40%; }
+  .anc__cap { left: 6vw; right: 6vw; bottom: 6svh; max-width: none; }
+  .anc__hint { display: none; }
+}
+
+/* next-wing arch (same as the other wings) */
+.next { position: relative; display: flex; flex-direction: column; align-items: center; padding: 16svh 6vw 12svh; overflow: hidden; background: radial-gradient(ellipse 60% 60% at 50% 70%, #33241a 0%, #1a130e 55%, #110c09 100%); }
+.next__k { font-size: 10px; text-transform: uppercase; letter-spacing: .16em; color: var(--mute); }
+.next__arch { width: clamp(220px, 24vw, 380px); height: clamp(320px, 36vw, 560px); margin-top: 30px; }
+.next__arch .slot > img { filter: grayscale(1) contrast(1.1); }
+.next__word { margin-top: -0.55em; position: relative; z-index: 2; font-size: clamp(110px, 13vw, 240px); line-height: 1.2; color: var(--rose); pointer-events: none; }
+.next__sub { max-width: 40ch; text-align: center; font-size: 12px; color: rgba(243, 230, 220, .75); }
+.arch { position: relative; display: block; border-radius: 999px 999px 0 0; overflow: hidden; }
+.arch .slot { width: 100%; height: 100%; }
+.arch .slot-label { text-align: center; align-items: center; padding-bottom: 16px; z-index: 2; }
+.arch .slot-label small { display: none; }
+.arch::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .1) 0 2px, rgba(255, 255, 255, 0) 2px 9px, rgba(0, 0, 0, .08) 9px 11px);
+  backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+  transition: transform 1.1s var(--ease);
+}
+.arch:hover::after { transform: translateY(101%); }

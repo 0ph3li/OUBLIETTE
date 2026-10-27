@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The Keepers — L'OUBLIETTE</title>
+  <meta name="description" content="The keepers of L'Oubliette: three borzois who guard everything the museums forgot, their night shift, and the borzois who sat for painters before them." />
+  <meta name="theme-color" content="#0e0b0a" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Monsieur+La+Doulaise&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261027-2" />
+  <link rel="stylesheet" href="css/keepers.css?v=20261027-2" />
+</head>
+<body class="is-loading" data-page="keepers">
+
+  <!-- ================= LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-word sc">Gardiens</p>
+    <span class="ld-line"><i id="ldBar"></i></span>
+    <p class="ld-depth">descending &nbsp;<b id="ldDepth">−00</b> m</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__lens"></i><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= HEADER + RAILS ================= -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="logo" aria-label="L'Oubliette home">L'Oubliette<br />Paris</a>
+    <a href="index.html" class="hdr__more" data-cursor="back upstairs">Home</a>
+    <button class="hdr__menu" id="menuBtn" aria-expanded="false" aria-controls="menu" data-cursor="open"><i></i><i></i><i></i><span>menu</span></button>
+  </header>
+  <div class="rail rail--l" aria-hidden="true"><span class="rail__name" id="railName">Gardiens</span><i class="rail__line"></i></div>
+  <div class="rail rail--yrs" aria-hidden="true">2017 — today</div>
+  <div class="rail rail--r" aria-hidden="true">The keepers</div>
+
+  <!-- ================= MENU ================= -->
+  <nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
+    <p class="menu__ghost" aria-hidden="true">Menu</p>
+    <button class="menu__close" id="menuClose" data-cursor="close">✕ <span>Close</span></button>
+    <ul class="menu__main">
+      <li><a href="index.html">Home</a><small>back up the stairs</small></li>
+      <li><a href="refused.html">Refusés</a><small>everything they sent back</small></li>
+      <li><a href="stolen.html">Volés</a><small>cut from their frames</small></li>
+      <li><a href="hidden.html">Cachés</a><small>painted over, still there</small></li>
+    </ul>
+    <div class="menu__side">
+      <a href="visit.html">Buy your tickets</a>
+      <a href="index.html">Back to the home</a>
+      <a href="refused.html">The refused wing</a>
+      <a href="stolen.html">The stolen wing</a>
+      <a href="hidden.html">The hidden wing</a>
+      <p class="menu__hist">Gardiens</p>
+      <p class="menu__guide">On duty</p>
+      <ol class="menu__list">
+        <li>Oubli, head keeper (since 2017)</li>
+        <li>Rancune, night keeper (since 2019)</li>
+        <li>Pardon, the apprentice (since 2023)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ========== 01 HERO: the "vidahen" collage over the spiral stairs ========== -->
+    <section class="khero" id="khero" data-rail="Gardiens">
+      <div class="khero__stair" aria-hidden="true"><div class="slot" data-img="img/KEEPERS/stair.jpg" data-pos="50% 40%" data-label="KEEPERS/stair.jpg · a spiral staircase in a museum, New Orleans, 1934"></div></div>
+      <div class="khero__card khero__card--top" data-cursor="ancestors">
+        <div class="slot" data-img="img/KEEPERS/stretton.jpg" data-pos="46% 30%" data-label="KEEPERS/stretton.jpg · Philip Eustace Stretton, Two Borzoi Dogs in an Interior"></div>
+      </div>
+      <div class="khero__card khero__card--low" data-cursor="do not sit here">
+        <div class="slot" data-img="img/HOME/keeper-oubli.jpg" data-pos="40% 30%" data-label="HOME/keeper-oubli.jpg · Oubli on green velvet"></div>
+      </div>
+      <svg class="khero__swash" viewBox="0 0 300 200" aria-hidden="true"><path d="M60 150C10 120 20 40 110 30c80-9 150 30 130 80-14 34-70 40-96 18-20-17-8-46 22-48 40-3 70 30 52 64-20 38-110 50-170 18" pathLength="1" /><path d="M20 100c60-40 160-70 260-60" pathLength="1" /></svg>
+      <svg class="khero__key" viewBox="0 0 120 260" aria-hidden="true">
+        <circle cx="60" cy="50" r="38" /><circle cx="60" cy="50" r="22" />
+        <circle class="g" cx="60" cy="12" r="6" /><circle class="g" cx="22" cy="50" r="6" /><circle class="g" cx="98" cy="50" r="6" />
+        <path d="M54 88h12v140H54z" /><path d="M66 180h24v14H66zM66 206h18v14H66z" />
+        <circle class="g" cx="60" cy="50" r="7" />
+      </svg>
+      <h1 class="khero__title"><span class="script">G</span><span class="khero__rest">ardiens</span></h1>
+      <p class="khero__txt">Three borzois keep the keys of the oubliette. They walk the stairs at night, fourteen metres of them, and they sniff every visitor on the way back up. Whatever you saw down here, they make sure you forget it, and they are very good at their job. They were not hired. They came down one winter and refused to leave, which, in this museum, is the only qualification there is.</p>
+      <p class="khero__depth"><b id="kDepth">−14</b> m · 63 steps</p>
+    </section>
+
+    <!-- ========== 02 THE KEEPERS: the "epictetus" site, one at a time ========== -->
+    <section class="kroom" id="keepers" data-rail="On duty">
+      <svg class="kroom__lines" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-40 760C300 600 520 900 820 720s460-300 700-180" pathLength="1" />
+        <path d="M-40 790C310 640 520 930 830 750s470-300 700-170" pathLength="1" />
+        <path d="M1480 120C1200 60 1100 280 900 240" pathLength="1" />
+      </svg>
+      <p class="kroom__logo"><b>T</b><span>ONE<br />BORZOI<br />EACH</span></p>
+      <div class="kroom__orb">
+        <span class="kroom__ring" aria-hidden="true"></span>
+        <div class="kroom__pics" id="kPics" data-cursor="good dog">
+          <div class="kroom__pic is-on"><div class="slot" data-img="img/HOME/keeper-oubli.jpg" data-pos="40% 25%" data-label="HOME/keeper-oubli.jpg · Oubli"></div></div>
+          <div class="kroom__pic"><div class="slot" data-img="img/HOME/keeper-rancune.jpg" data-pos="50% 40%" data-label="HOME/keeper-rancune.jpg · Rancune"></div></div>
+          <div class="kroom__pic"><div class="slot" data-flip data-img="img/HOME/keeper-pardon.jpg" data-pos="50% 30%" data-label="HOME/keeper-pardon.jpg · Pardon"></div></div>
+        </div>
+      </div>
+      <nav class="kroom__tabs" aria-label="About this keeper">
+        <button class="is-on" data-tab="0">Quote</button>
+        <button data-tab="1">Duty</button>
+        <button data-tab="2">Habits</button>
+        <button data-tab="3">History</button>
+      </nav>
+      <div class="kroom__txt">
+        <h2 class="kroom__name" id="kName">Oubli</h2>
+        <p class="kroom__role" id="kRole">head keeper · since 2017</p>
+        <p class="kroom__body" id="kBody">“There is only one way into the oubliette, and it is down. There is only one way out, and it is to forget.”</p>
+        <p class="kroom__sub" id="kSub">(she has never said this. she looks like she would.)</p>
+        <p class="kroom__aside" id="kAside">Oubli has slept on the green armchair since 2017. The armchair belonged to a curator who forgot it here.</p>
+      </div>
+      <div class="kroom__thumbs">
+        <button class="kroom__arr" id="kUp" aria-label="previous keeper" data-cursor="previous">‹</button>
+        <button class="kroom__th is-on" data-k="0" aria-label="Oubli"><div class="slot" data-img="img/HOME/keeper-oubli.jpg" data-pos="40% 20%" data-label="Oubli"></div></button>
+        <button class="kroom__th" data-k="1" aria-label="Rancune"><div class="slot" data-img="img/HOME/keeper-rancune.jpg" data-pos="50% 40%" data-label="Rancune"></div></button>
+        <button class="kroom__th" data-k="2" aria-label="Pardon"><div class="slot" data-flip data-img="img/HOME/keeper-pardon.jpg" data-pos="50% 25%" data-label="Pardon"></div></button>
+        <button class="kroom__arr" id="kDown" aria-label="next keeper" data-cursor="next">›</button>
+      </div>
+    </section>
+
+    <!-- ========== 03 THE NIGHT SHIFT: the mirrored sleeping borzois ========== -->
+    <section class="night" id="night" data-rail="Night shift">
+      <div class="night__half night__half--a" data-cursor="asleep">
+        <div class="slot" data-img="img/HOME/keeper-rancune.jpg" data-pos="50% 45%" data-label="HOME/keeper-rancune.jpg · Rancune"></div>
+        <p class="night__k">on watch</p>
+      </div>
+      <div class="night__half night__half--b" data-cursor="also asleep">
+        <div class="slot" data-img="img/HOME/keeper-rancune.jpg" data-pos="50% 45%" data-label="HOME/keeper-rancune.jpg · Rancune, upside down"></div>
+        <p class="night__k">asleep</p>
+      </div>
+      <div class="night__mid">
+        <p class="night__title"><span class="sc">The night</span><span class="script">shift</span></p>
+        <p class="night__now">Paris, <b data-clock>00:00</b> · on watch now: <b id="nightWho">Rancune</b></p>
+        <p class="night__txt">From ten at night to six in the morning one borzoi watches and one sleeps, and they swap every hour on the hour. Nobody taught them this. Nobody has ever checked whether the one on watch is awake.</p>
+      </div>
+    </section>
+
+    <!-- ========== 04 ANCESTORS: the painted borzoi, too close ========== -->
+    <section class="anc" id="ancestors" data-rail="Ancestors">
+      <div class="anc__pin">
+        <p class="anc__k">Ancestors in the collection</p>
+        <div class="anc__stage" id="ancStage">
+          <figure class="anc__fig is-on" data-o="47% 30%"><div class="slot" data-img="img/KEEPERS/stretton.jpg" data-label="KEEPERS/stretton.jpg · Stretton, Two Borzoi Dogs in an Interior"></div></figure>
+          <figure class="anc__fig" data-o="57% 36%"><div class="slot" data-img="img/KEEPERS/eerelman.jpg" data-label="KEEPERS/eerelman.jpg · Eerelman, Two Borzois on a Terrace"></div></figure>
+          <figure class="anc__fig" data-o="36% 40%"><div class="slot" data-img="img/KEEPERS/fairman.jpg" data-label="KEEPERS/fairman.jpg · Fairman, Borzoi"></div></figure>
+          <figure class="anc__fig" data-o="45% 32%"><div class="slot" data-img="img/KEEPERS/laszlo.jpg" data-label="KEEPERS/laszlo.jpg · de László, A Borzoi Dog"></div></figure>
+          <figure class="anc__fig" data-o="48% 68%"><div class="slot" data-img="img/KEEPERS/hunt.jpg" data-label="KEEPERS/hunt.jpg · Tikhmenev, Wolf Hunt with Borzois"></div></figure>
+        </div>
+        <div class="anc__cap">
+          <p class="anc__n"><b id="ancN">01</b> / 05</p>
+          <h3 class="anc__t" id="ancT">Two Borzoi Dogs in an Interior</h3>
+          <p class="anc__by" id="ancBy">Philip Eustace Stretton, English, c. 1900</p>
+          <p class="anc__note" id="ancNote">one of them is lying on a bearskin. the bear was not consulted.</p>
+        </div>
+        <p class="anc__hint">too close. keep scrolling.</p>
+      </div>
+    </section>
+
+    <!-- ========== 05 NEXT WING ========== -->
+    <section class="next" id="next" data-rail="Next">
+      <p class="next__k">Last door</p>
+      <a class="next__arch arch" href="visit.html" data-cursor="come down">
+        <div class="slot" data-img="img/KEEPERS/stair.jpg" data-pos="50% 40%" data-label="KEEPERS/stair.jpg"></div>
+      </a>
+      <p class="next__word script" data-split>Visite</p>
+      <p class="next__sub">one ticket, one memory, no refunds. the keepers will see you to the door, and then out of your head.</p>
+    </section>
+
+    <!-- ========== FOOTER: persephone ========== -->
+    <footer class="ft">
+      <div class="ft__poster">
+        <div class="ft__pic"><div class="slot" data-img="img/HOME/footer.jpg" data-pos="50% 25%" data-label="HOME/footer.jpg · Rossetti, Proserpine, 1874" data-cursor="eight attempts"></div></div>
+        <div class="ft__col">
+          <span class="ft__star" aria-hidden="true">✦</span>
+          <div class="ft__cols">
+            <ul class="ft__side" aria-hidden="true"><li>refused</li><li>○</li><li>stolen</li><li>○</li><li>hidden</li><li>○</li><li>kept</li></ul>
+            <p class="ft__word script">l'oubliette</p>
+            <ul class="ft__side" aria-hidden="true"><li>upstairs</li><li>○</li><li>and</li><li>○</li><li>down</li><li>○</li><li>here</li></ul>
+          </div>
+          <span class="ft__star" aria-hidden="true">✦</span>
+        </div>
+      </div>
+      <div class="ft__grid">
+        <div><p class="ft__k">The museum</p><a href="index.html">Home</a><a href="refused.html">The refused</a><a href="stolen.html">The stolen</a><a href="hidden.html">The hidden</a></div>
+        <div><p class="ft__k">The keepers</p><a href="#keepers" data-jump>On duty</a><a href="#night" data-jump>The night shift</a><a href="#ancestors" data-jump>Ancestors</a></div>
+        <div><p class="ft__k">Paris, upstairs</p><span class="ft__clock" data-clock>00:00</span><span id="doors">the candles are lit.</span></div>
+        <div class="ft__up"><a href="#top" data-jump data-cursor="back up">Back up the stairs ↑</a></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 L'Oubliette — a concept. the paintings are real, the dogs are real. the museum isn't.</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261027-2"></script>
+  <script src="js/keepers.js?v=20261027-2"></script>
+</body>
+  <!--
+   *    /\_/\      ✦
+       ( o.o )   <3  ghostly.grl
+   ✦    > ^ <   🕯     *
+-->
+</html>

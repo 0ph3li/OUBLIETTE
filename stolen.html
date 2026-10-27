@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The Stolen — L'OUBLIETTE</title>
+  <meta name="description" content="The stolen wing of L'Oubliette: eighty-one minutes in Boston, five paintings still missing, the two years the Mona Lisa spent in a trunk, and the light fingers who took them." />
+  <meta name="theme-color" content="#120d0a" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Monsieur+La+Doulaise&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261026-13" />
+  <link rel="stylesheet" href="css/stolen.css?v=20261026-13" />
+</head>
+<body class="is-loading" data-page="stolen">
+
+  <!-- ================= LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-word sc">Volés</p>
+    <span class="ld-line"><i id="ldBar"></i></span>
+    <p class="ld-depth">descending &nbsp;<b id="ldDepth">−00</b> m</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__lens"></i><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= HEADER + RAILS ================= -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="logo" aria-label="L'Oubliette home">L'Oubliette<br />Paris</a>
+    <a href="index.html" class="hdr__more" data-cursor="back upstairs">Home</a>
+    <button class="hdr__menu" id="menuBtn" aria-expanded="false" aria-controls="menu" data-cursor="open"><i></i><i></i><i></i><span>menu</span></button>
+  </header>
+  <div class="rail rail--l" aria-hidden="true"><span class="rail__name" id="railName">Volés</span><i class="rail__line"></i></div>
+  <div class="rail rail--yrs" aria-hidden="true">1911 — 2010</div>
+  <div class="rail rail--r" aria-hidden="true">The stolen wing</div>
+
+  <!-- ================= MENU ================= -->
+  <nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
+    <p class="menu__ghost" aria-hidden="true">Menu</p>
+    <button class="menu__close" id="menuClose" data-cursor="close">✕ <span>Close</span></button>
+    <ul class="menu__main">
+      <li><a href="index.html">Home</a><small>back up the stairs</small></li>
+      <li><a href="refused.html">Refusés</a><small>everything they sent back</small></li>
+      <li><a href="hidden.html">Cachés</a><small>painted over, still there</small></li>
+      <li><a href="visit.html">Visit</a><small>one memory, no refunds</small></li>
+    </ul>
+    <div class="menu__side">
+      <a href="visit.html">Buy your tickets</a>
+      <a href="index.html">Back to the home</a>
+      <a href="keepers.html">Meet the keepers</a>
+      <a href="refused.html">The refused wing</a>
+      <a href="hidden.html">The hidden wing</a>
+      <p class="menu__hist">Volés</p>
+      <p class="menu__guide">In this wing</p>
+      <ol class="menu__list">
+        <li>Raffaello Sanzio (1483–1520)</li>
+        <li>Johannes Vermeer (1632–1675)</li>
+        <li>Leonardo da Vinci (1452–1519)</li>
+        <li>Michelangelo Merisi da Caravaggio (1571–1610)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ========== 01 HERO: the "countries" poster, GERMANY → VOLÉS ========== -->
+    <section class="shero" id="shero" data-rail="Volés">
+      <div class="shero__poster">
+        <div class="shero__top"><span>L'Oubliette</span><span>−14 m</span></div>
+        <svg class="shero__halo" viewBox="0 0 600 400" aria-hidden="true"><!-- rays from js --></svg>
+        <div class="shero__fig"><div class="slot" data-img="img/STOLEN/hero.jpg" data-pos="50% 30%" data-label="STOLEN/hero.jpg · Raphael, Portrait of a Young Man, c. 1513–14: taken in 1945, only photographs are left" data-cursor="since 1945"></div></div>
+        <h1 class="shero__title" aria-label="Volés"><span>V</span><span>O</span><span>L</span><span>É</span><span>S</span></h1>
+        <div class="shero__rule"><span>The “stolen” project</span><i></i><span>since 1911</span></div>
+        <p class="shero__vol">vol. 02</p>
+        <p class="shero__no">#2</p>
+      </div>
+      <div class="shero__band">
+        <svg class="shero__crest" viewBox="0 0 120 150" aria-hidden="true">
+          <rect x="8" y="8" width="104" height="134" />
+          <rect x="20" y="20" width="80" height="110" />
+          <path d="M20 20 8 8M100 20l12-12M20 130 8 142M100 130l12 12" />
+          <path class="shero__cut" d="M30 30h60v90H30z" />
+        </svg>
+        <p class="shero__txt">The stolen wing keeps what was taken: cut from its stretcher with a box cutter, lifted off a wall on a Monday morning, carried out under a coat while the fireworks went off. Some came back after decades, from bank vaults, from under beds, from a crime boss's house near Naples. Some never did. Here, the frames wait for both.</p>
+        <ul class="shero__icons" aria-hidden="true">
+          <li><svg viewBox="0 0 40 40"><circle cx="13" cy="20" r="7" /><path d="M20 20h16M30 20v6M34 20v4" /></svg></li>
+          <li><svg viewBox="0 0 40 40"><path d="M6 16c4-6 24-6 28 0-2 8-8 10-14 10S8 24 6 16z" /><circle cx="14" cy="18" r="2.5" /><circle cx="26" cy="18" r="2.5" /></svg></li>
+          <li><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14" /><path d="M20 10v10l7 5" /></svg></li>
+        </ul>
+        <p class="shero__warn">Warning: to avoid danger of forgetting, keep this page away from museum directors and insurance companies.</p>
+        <p class="shero__warn shero__warn--r">Notice: no frames were harmed in the making of this wing. most of them were already empty.</p>
+      </div>
+    </section>
+
+    <!-- ========== 02 THE GARDNER NIGHT: the maslenitsa orbit ========== -->
+    <section class="orbit" id="gardner" data-rail="18 · 03 · 1990">
+      <div class="orbit__pin">
+        <p class="orbit__c orbit__c--tl">18/03</p>
+        <p class="orbit__c orbit__c--tr" id="orbitClock">01:24</p>
+        <p class="orbit__c orbit__c--bl">Boston</p>
+        <p class="orbit__c orbit__c--br">81 min</p>
+        <div class="orbit__ring">
+          <svg class="orbit__svg" viewBox="0 0 1000 1000" aria-hidden="true">
+            <circle class="orbit__line" cx="500" cy="500" r="430" />
+            <circle class="orbit__trail" cx="500" cy="500" r="430" pathLength="1" />
+            <line class="orbit__axis" x1="-200" y1="500" x2="1200" y2="500" />
+            <circle class="orbit__moon orbit__moon--l" cx="-120" cy="500" r="70" />
+            <circle class="orbit__moon orbit__moon--r" cx="1120" cy="500" r="70" />
+          </svg>
+          <div class="orbit__dots" id="orbitDots"><!-- 13 from js --></div>
+          <div class="orbit__core" data-cursor="gone">
+            <div class="orbit__pic is-on"><div class="slot" data-img="img/STOLEN/orbit-01.jpg" data-pos="50% 35%" data-label="STOLEN/orbit-01.jpg · Rembrandt, A Lady and Gentleman in Black, 1633"></div></div>
+            <div class="orbit__pic"><div class="slot" data-img="img/HOME/voles-01.jpg" data-label="HOME/voles-01.jpg · Rembrandt, The Storm on the Sea of Galilee"></div></div>
+            <div class="orbit__pic"><div class="slot" data-img="img/HOME/wing-stolen.jpg" data-label="HOME/wing-stolen.jpg · Vermeer, The Concert"></div></div>
+            <div class="orbit__pic"><div class="slot" data-img="img/STOLEN/orbit-02.jpg" data-label="STOLEN/orbit-02.jpg · Manet, Chez Tortoni, c. 1878–80"></div></div>
+            <div class="orbit__pic"><div class="slot" data-img="img/STOLEN/orbit-03.jpg" data-label="STOLEN/orbit-03.jpg · Govaert Flinck, Landscape with an Obelisk, 1638"></div></div>
+            <h2 class="orbit__title sc">Thirteen<small>in one night</small></h2>
+          </div>
+        </div>
+        <div class="orbit__cap">
+          <p class="orbit__n"><b id="orbitN">01</b> / 13</p>
+          <h3 class="orbit__what" id="orbitWhat">A Lady and Gentleman in Black</h3>
+          <p class="orbit__who" id="orbitWho">Rembrandt, 1633</p>
+        </div>
+        <p class="orbit__side orbit__side--l">At 1:24 a.m. two men dressed as Boston police rang the side door of the Isabella Stewart Gardner Museum. The guard let them in. They tied up both guards in the basement.</p>
+        <p class="orbit__side orbit__side--r">They left at 2:45 with thirteen works. The reward is ten million dollars. The empty frames still hang where the paintings were, because Isabella's will says nothing may be moved.</p>
+      </div>
+    </section>
+
+    <!-- ========== 03 WANTED: the "рейтинг" ranking ========== -->
+    <section class="want" id="wanted" data-rail="Wanted">
+      <div class="want__band">
+        <div class="slot" data-img="img/STOLEN/band.jpg" data-pos="50% 45%" data-label="STOLEN/band.jpg · Van Gogh, View of the Sea at Scheveningen, 1882" data-cursor="this one came home"></div>
+        <h2 class="want__title sc">Wanted</h2>
+        <p class="want__sub">not this one. stolen in Amsterdam in 2002, it came back in 2016, from a mafia boss's house near Naples.</p>
+      </div>
+      <ol class="want__list" id="wantList"><!-- rows from js --></ol>
+      <p class="want__foot">years missing, counted from today. <span data-clock></span> in Paris.</p>
+    </section>
+
+    <!-- ========== 04 LA JOCONDE: "interview with the vampire" frame ========== -->
+    <section class="mona" id="joconde" data-rail="La Joconde">
+      <div class="mona__poster">
+        <p class="mona__names"><span>21 August 1911</span><span>December 1913</span></p>
+        <p class="mona__vert mona__vert--l">Vincenzo Peruggia</p>
+        <p class="mona__vert mona__vert--r">Salon Carré, Paris</p>
+        <div class="mona__frame">
+          <div class="mona__wall" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="mona__pic"><div class="slot" data-img="img/STOLEN/mona.jpg" data-pos="50% 30%" data-label="STOLEN/mona.jpg · Leonardo, Mona Lisa, 1503–19" data-cursor="she came back"></div></div>
+          <h2 class="mona__title"><span class="sc">Gone for</span><span class="script">two years</span></h2>
+        </div>
+        <p class="mona__tag">— lift me off the wall and walk out —</p>
+        <div class="mona__txt">
+          <p>On a Monday, when the Louvre was closed, a glazier who had helped put her behind glass walked out with her under his smock. Nobody noticed for a day. The guards thought she was being photographed.</p>
+          <p>Paris queued to look at the four empty hooks. Apollinaire was arrested, Picasso was questioned. She spent two years and four months in a trunk in Peruggia's room, until he tried to sell her to a dealer in Florence.</p>
+        </div>
+        <p class="mona__count"><b id="monaDays">0</b> days on the hooks alone</p>
+      </div>
+    </section>
+
+    <!-- ========== 05 LIGHT FINGERS: the "karl richer gallery" slides ========== -->
+    <section class="fing" id="fingers" data-rail="Light fingers">
+      <h2 class="fing__title"><span class="script">Light fingers</span><span class="sc">Gallery</span></h2>
+      <div class="fing__slides">
+        <article class="fing__slide">
+          <div class="slot" data-img="img/STOLEN/hands.jpg" data-pos="84% 80%" data-label="STOLEN/hands.jpg · Caravaggio, The Cardsharps, c. 1594" data-cursor="glazier"></div>
+          <p class="fing__name">Vincenzo Peruggia</p>
+          <p class="fing__meta"><span>1911</span><span>the Louvre</span><span>a glazier with a key</span></p>
+        </article>
+        <article class="fing__slide">
+          <div class="slot" data-img="img/STOLEN/hands.jpg" data-pos="47% 40%" data-label="STOLEN/hands.jpg · Caravaggio, The Cardsharps (detail)" data-cursor="never caught"></div>
+          <p class="fing__name">Two policemen</p>
+          <p class="fing__meta"><span>1990</span><span>the Gardner</span><span>never caught, never were policemen</span></p>
+        </article>
+        <article class="fing__slide">
+          <div class="slot" data-img="img/STOLEN/hands.jpg" data-pos="20% 66%" data-label="STOLEN/hands.jpg · Caravaggio, The Cardsharps (detail)" data-cursor="about 240"></div>
+          <p class="fing__name">Stéphane Breitwieser</p>
+          <p class="fing__meta"><span>1995 — 2001</span><span>172 museums</span><span>about 240 objects, all for his bedroom</span></p>
+        </article>
+      </div>
+      <ul class="fing__more" aria-label="other names">
+        <li><b>Myles Connor</b>1975 · a Rembrandt, to bargain his way out of prison</li>
+        <li><b>Vjeran Tomić</b>2010 · five paintings, one night, Paris · “Spider-Man”</li>
+        <li><b>Hans Frank</b>1945 · the Raphael, last seen in his hands</li>
+      </ul>
+    </section>
+
+    <!-- ========== 06 NEXT WING ========== -->
+    <section class="next" id="next" data-rail="Next wing">
+      <p class="next__k">Next wing</p>
+      <a class="next__arch arch" href="hidden.html" data-cursor="the hidden">
+        <div class="slot" data-img="img/HOME/wing-hidden.jpg" data-label="HOME/wing-hidden.jpg · Picasso, The Blue Room"></div>
+      </a>
+      <p class="next__word script" data-split>Cachés</p>
+      <p class="next__sub">painted over, covered up, folded inside another picture. still there, if you know where to look.</p>
+    </section>
+
+    <!-- ========== FOOTER: persephone ========== -->
+    <footer class="ft">
+      <div class="ft__poster">
+        <div class="ft__pic"><div class="slot" data-img="img/HOME/footer.jpg" data-pos="50% 25%" data-label="HOME/footer.jpg · Rossetti, Proserpine, 1874" data-cursor="eight attempts"></div></div>
+        <div class="ft__col">
+          <span class="ft__star" aria-hidden="true">✦</span>
+          <div class="ft__cols">
+            <ul class="ft__side" aria-hidden="true"><li>refused</li><li>○</li><li>stolen</li><li>○</li><li>hidden</li><li>○</li><li>kept</li></ul>
+            <p class="ft__word script">l'oubliette</p>
+            <ul class="ft__side" aria-hidden="true"><li>upstairs</li><li>○</li><li>and</li><li>○</li><li>down</li><li>○</li><li>here</li></ul>
+          </div>
+          <span class="ft__star" aria-hidden="true">✦</span>
+        </div>
+      </div>
+      <div class="ft__grid">
+        <div><p class="ft__k">The museum</p><a href="index.html">Home</a><a href="refused.html">The refused</a><a href="hidden.html">The hidden</a><a href="keepers.html">The keepers</a></div>
+        <div><p class="ft__k">This wing</p><a href="#gardner" data-jump>The Gardner night</a><a href="#wanted" data-jump>Wanted</a><a href="#joconde" data-jump>La Joconde</a><a href="#fingers" data-jump>Light fingers</a></div>
+        <div><p class="ft__k">Paris, upstairs</p><span class="ft__clock" data-clock>00:00</span><span id="doors">the candles are lit.</span></div>
+        <div class="ft__up"><a href="#top" data-jump data-cursor="back up">Back up the stairs ↑</a></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 L'Oubliette — a concept. the works and their thefts are real. the museum isn't.</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261026-13"></script>
+  <script src="js/stolen.js?v=20261026-13"></script>
+</body>
+  <!--
+   *    /\_/\      ✦
+       ( o.o )   <3  ghostly.grl
+   ✦    > ^ <   🕯     *
+-->
+</html>

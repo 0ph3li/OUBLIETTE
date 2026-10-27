@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The Refused — L'OUBLIETTE</title>
+  <meta name="description" content="The refused wing of L'Oubliette: the Salon des Refusés of 1863, the jury's verdicts, the model who got in when Manet didn't, and a Caravaggio that lasted a few days in Saint Peter's." />
+  <meta name="theme-color" content="#120d0a" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Monsieur+La+Doulaise&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261026-9" />
+  <link rel="stylesheet" href="css/refused.css?v=20261026-9" />
+</head>
+<body class="is-loading" data-page="refused">
+
+  <!-- ================= LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-word sc">Refusés</p>
+    <span class="ld-line"><i id="ldBar"></i></span>
+    <p class="ld-depth">descending &nbsp;<b id="ldDepth">−00</b> m</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__lens"></i><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= HEADER + RAILS ================= -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="logo" aria-label="L'Oubliette home">L'Oubliette<br />Paris</a>
+    <a href="index.html" class="hdr__more" data-cursor="back upstairs">Home</a>
+    <button class="hdr__menu" id="menuBtn" aria-expanded="false" aria-controls="menu" data-cursor="open"><i></i><i></i><i></i><span>menu</span></button>
+  </header>
+  <div class="rail rail--l" aria-hidden="true"><span class="rail__name" id="railName">Refusés</span><i class="rail__line"></i></div>
+  <div class="rail rail--yrs" aria-hidden="true">1606 — 1884</div>
+  <div class="rail rail--r" aria-hidden="true">The refused wing</div>
+
+  <!-- ================= MENU ================= -->
+  <nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
+    <p class="menu__ghost" aria-hidden="true">Menu</p>
+    <button class="menu__close" id="menuClose" data-cursor="close">✕ <span>Close</span></button>
+    <ul class="menu__main">
+      <li><a href="index.html">Home</a><small>back up the stairs</small></li>
+      <li><a href="stolen.html">Volés</a><small>cut from their frames</small></li>
+      <li><a href="hidden.html">Cachés</a><small>painted over, still there</small></li>
+      <li><a href="visit.html">Visit</a><small>one memory, no refunds</small></li>
+    </ul>
+    <div class="menu__side">
+      <a href="visit.html">Buy your tickets</a>
+      <a href="index.html">Back to the home</a>
+      <a href="keepers.html">Meet the keepers</a>
+      <a href="stolen.html">The stolen wing</a>
+      <a href="hidden.html">The hidden wing</a>
+      <p class="menu__hist">Refusés</p>
+      <p class="menu__guide">In this wing</p>
+      <ol class="menu__list">
+        <li>Édouard Manet (1832–1883)</li>
+        <li>Victorine Meurent (1844–1927)</li>
+        <li>Gustave Courbet (1819–1877)</li>
+        <li>Michelangelo Merisi da Caravaggio (1571–1610)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ========== 01 HERO: the louvre landing, "welcome to the louvre" ========== -->
+    <section class="rhero" id="rhero" data-rail="Refusés">
+      <h1 class="rhero__title sc">
+        <span class="rhero__l1" data-split>Welcome</span>
+        <span class="rhero__l2" data-split>to the refused</span>
+      </h1>
+      <div class="rhero__fig"><div class="slot" data-img="img/REFUSED/hero.jpg" data-pos="50% 18%" data-label="REFUSED/hero.jpg · Manet, Mademoiselle V. in the Costume of an Espada, 1862: shown at the Salon des Refusés, 1863" data-cursor="mlle v."></div></div>
+      <div class="rhero__pic rhero__pic--l"><div class="slot" data-img="img/REFUSED/hero-l.jpg" data-pos="50% 30%" data-label="REFUSED/hero-l.jpg · Manet, Young Man in the Costume of a Majo, 1863"></div></div>
+      <div class="rhero__pic rhero__pic--r"><div class="slot" data-img="img/REFUSED/hero-r.jpg" data-label="REFUSED/hero-r.jpg · Manet, Le Déjeuner sur l'herbe, 1863"></div></div>
+      <p class="rhero__txt rhero__txt--l">Home to <em>Le Déjeuner sur l'herbe</em> in spirit, if not in fact, the refused wing keeps everything a jury looked at for less than a second and sent back down the stairs.</p>
+      <p class="rhero__txt rhero__txt--r">The Salon hardly needs an introduction: it was the most-visited exhibition in the world, and it said no to more than three thousand pictures in 1863 alone.</p>
+      <a href="#salon" class="rhero__down" data-jump data-cursor="down we go"><em>scroll down</em> ↓</a>
+    </section>
+
+    <!-- ========== 02 1863: göteborg "history / XV" ========== -->
+    <section class="salon cream" id="salon" data-rail="1863">
+      <div class="salon__pic" data-cursor="the refused, together"><div class="slot" data-img="img/REFUSED/hist.jpg" data-pos="40% 50%" data-label="REFUSED/hist.jpg · Fantin-Latour, Homage to Delacroix, 1864: Manet, Whistler and Baudelaire around a portrait"></div></div>
+      <h2 class="salon__word script" data-split>Salon</h2>
+      <p class="salon__yr" aria-label="1863"><span>1</span><span>8</span><span>6</span><span>3</span></p>
+      <div class="salon__txt">
+        <p>About five thousand pictures were sent to the Palais de l'Industrie that spring. The jury refused more than three thousand. The painters complained so loudly that Napoleon III went to look for himself, and decided the public could judge.</p>
+        <p>On 15 May 1863 the refused works opened in the rooms next door. Paris came to laugh, and kept coming back.</p>
+      </div>
+      <div class="salon__count">
+        <p><b data-count="5000">0</b><small>sent in</small></p>
+        <p><b data-count="3000" data-plus>0</b><small>refused</small></p>
+        <p><b data-count="1">0</b><small>emperor, annoyed</small></p>
+      </div>
+    </section>
+
+    <!-- ========== 03 MANET / ABOUT: göteborg "rembrandt / about" ========== -->
+    <section class="man" id="manet" data-rail="Manet">
+      <div class="man__pic">
+        <div class="slot" data-img="img/REFUSED/manet.jpg" data-pos="50% 22%" data-label="REFUSED/manet.jpg · Fantin-Latour, Portrait of Édouard Manet, 1867" data-cursor="monsieur manet"></div>
+        <h2 class="man__name sc" data-split>Manet</h2>
+        <p class="man__yrs"><span>1832</span><span>1883</span></p>
+      </div>
+      <div class="man__txt">
+        <h3 class="man__about sc">About</h3>
+        <p class="man__lead">He wanted the Salon more than anyone. He sent them pictures for twenty years, and the jury kept sending some of them back.</p>
+        <p>In 1863 he hung <em>Le Déjeuner sur l'herbe</em> in the refused rooms, where it became the most mocked picture in Paris. In 1865 the jury let <em>Olympia</em> in, then had to guard her. In 1866 they refused <em>The Fifer</em>. In 1867 he gave up on them and built his own pavilion by the Pont de l'Alma, the way Courbet had twelve years before.</p>
+        <p>He never joined the Impressionists' shows. He kept knocking on the front door instead. They gave him the Légion d'honneur in 1881. He died two years later.</p>
+        <blockquote class="man__quote glass">“He sent them pictures. They sent them back. He sent more.”<cite>— the keepers</cite></blockquote>
+      </div>
+    </section>
+
+    <!-- ========== 04 THE JURY: be the jury (pinned stack, a red stamp) ========== -->
+    <section class="jury" id="jury" data-rail="The Jury">
+      <div class="jury__pin">
+        <div class="jury__head">
+          <h2 class="jury__title"><span class="sc">The</span> <span class="script">Jury</span></h2>
+          <p class="jury__hint">five pictures. you decide first, then we tell you what they did.</p>
+        </div>
+        <div class="jury__stack" id="juryStack"><!-- cards from js/refused.js --></div>
+        <div class="jury__side">
+          <p class="jury__n"><b id="juryN">01</b> / 05</p>
+          <h3 class="jury__what" id="juryWhat">The Fifer</h3>
+          <p class="jury__who" id="juryWho">Édouard Manet, 1866</p>
+          <p class="jury__why glass" id="juryWhy">your turn first.</p>
+          <div class="jury__btns">
+            <button class="jury__btn" data-v="yes" data-mag data-cursor="hang it">Accepté</button>
+            <button class="jury__btn jury__btn--no" data-v="no" data-mag data-cursor="send it back">Refusé</button>
+          </div>
+          <p class="jury__score" id="juryScore">you've judged 0 of 5.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 05 VICTORINE: göteborg "florence / cristofano allori" collage ========== -->
+    <section class="vic cream" id="victorine" data-rail="Victorine">
+      <h2 class="vic__name script" data-split>Victorine</h2>
+      <p class="vic__sur sc">Meurent</p>
+      <div class="vic__a"><div class="slot" data-img="img/REFUSED/victorine-01.jpg" data-pos="50% 20%" data-label="REFUSED/victorine-01.jpg · Manet, Young Lady in 1866 (Woman with a Parrot)" data-cursor="the model"></div></div>
+      <div class="vic__b"><div class="slot" data-img="img/REFUSED/victorine-02.jpg" data-pos="50% 25%" data-label="REFUSED/victorine-02.jpg · Manet, The Street Singer, c. 1862"></div></div>
+      <div class="vic__c"><div class="slot" data-img="img/REFUSED/victorine-03.jpg" data-label="REFUSED/victorine-03.jpg · Victorine Meurent, Palm Sunday, c. 1885: her only known surviving painting" data-cursor="the painter"></div></div>
+      <p class="vic__yr">1876</p>
+      <p class="vic__txt">You know her face: she is Olympia, she is the woman on the grass. What nobody told you is that she painted too. In 1876 the Salon accepted her self-portrait, and refused both of Manet's pictures. Her self-portrait is lost. One painting of hers survives, in a small museum in Colombes.</p>
+      <p class="vic__label glass">The model<small>Olympia, Le Déjeuner, The Street Singer, the parrot</small></p>
+      <p class="vic__label vic__label--2 glass">The painter<small>accepted 1876, 1879, 1885. forgotten anyway.</small></p>
+    </section>
+
+    <!-- ========== 06 PALAFRENIERI: göteborg cream "about" with the big portrait ========== -->
+    <section class="pala" id="palafrenieri" data-rail="Saint Peter's">
+      <div class="pala__frame">
+        <div class="slot" data-img="img/REFUSED/caravaggio.jpg" data-pos="50% 35%" data-label="REFUSED/caravaggio.jpg · Caravaggio, Madonna dei Palafrenieri, 1605–06: removed from Saint Peter's" data-cursor="a few days"></div>
+        <i class="pala__seal" aria-hidden="true">✦</i>
+      </div>
+      <div class="pala__txt">
+        <p class="pala__k">Rome · Saint Peter's · April 1606</p>
+        <h2 class="pala__title">Palafrenieri</h2>
+        <p class="pala__days"><b>a few</b> days on the altar</p>
+        <p>The papal grooms ordered an altarpiece for their chapel in the new basilica. Caravaggio gave them a Madonna with a low neckline, a naked Christ child old enough to walk, and Saint Anne as a wrinkled old woman watching them crush a snake.</p>
+        <p>It was hung, and then it was taken down. The grooms sold it, cheaply, to Cardinal Scipione Borghese, who had probably wanted it all along. It is still in his villa.</p>
+        <a href="#jury" data-jump class="pala__back">judge it yourself ↑</a>
+      </div>
+    </section>
+
+    <!-- ========== 07 NEXT WING: one arch, the stolen ========== -->
+    <section class="next" id="next" data-rail="Next wing">
+      <p class="next__k">Next wing</p>
+      <a class="next__arch arch" href="stolen.html" data-cursor="the stolen">
+        <div class="slot" data-img="img/HOME/wing-stolen.jpg" data-label="HOME/wing-stolen.jpg · Vermeer, The Concert"></div>
+      </a>
+      <p class="next__word script" data-split>Volés</p>
+      <p class="next__sub">thirteen works, one night in Boston, 1990. the frames are still on the wall.</p>
+    </section>
+
+    <!-- ========== FOOTER: persephone ========== -->
+    <footer class="ft">
+      <div class="ft__poster">
+        <div class="ft__pic"><div class="slot" data-img="img/HOME/footer.jpg" data-pos="50% 25%" data-label="HOME/footer.jpg · Rossetti, Proserpine, 1874" data-cursor="eight attempts"></div></div>
+        <div class="ft__col">
+          <span class="ft__star" aria-hidden="true">✦</span>
+          <div class="ft__cols">
+            <ul class="ft__side" aria-hidden="true"><li>refused</li><li>○</li><li>stolen</li><li>○</li><li>hidden</li><li>○</li><li>kept</li></ul>
+            <p class="ft__word script">l'oubliette</p>
+            <ul class="ft__side" aria-hidden="true"><li>upstairs</li><li>○</li><li>and</li><li>○</li><li>down</li><li>○</li><li>here</li></ul>
+          </div>
+          <span class="ft__star" aria-hidden="true">✦</span>
+        </div>
+      </div>
+      <div class="ft__grid">
+        <div><p class="ft__k">The museum</p><a href="index.html">Home</a><a href="visit.html">Visit</a><a href="stolen.html">The stolen</a><a href="keepers.html">The keepers</a></div>
+        <div><p class="ft__k">This wing</p><a href="#salon" data-jump>1863</a><a href="#manet" data-jump>Manet</a><a href="#jury" data-jump>The Jury</a><a href="#victorine" data-jump>Victorine</a></div>
+        <div><p class="ft__k">Paris, upstairs</p><span class="ft__clock" data-clock>00:00</span><span id="doors">the candles are lit.</span></div>
+        <div class="ft__up"><a href="#top" data-jump data-cursor="back up">Back up the stairs ↑</a></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 L'Oubliette — a concept. the works and their refusals are real. the museum isn't.</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261026-9"></script>
+  <script src="js/refused.js?v=20261026-9"></script>
+</body>
+  <!--
+   *    /\_/\      ✦
+       ( o.o )   <3  ghostly.grl
+   ✦    > ^ <   🕯     *
+-->
+</html>

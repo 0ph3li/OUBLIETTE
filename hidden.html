@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The Hidden — L'OUBLIETTE</title>
+  <meta name="description" content="The hidden wing of L'Oubliette: a skull you can only see from the side, a cupid painted out for centuries, a Leonardo that may be behind a wall, seven cuts in a Venus and a whale someone found bad for the dining room." />
+  <meta name="theme-color" content="#0b0908" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Monsieur+La+Doulaise&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261027-1" />
+  <link rel="stylesheet" href="css/hidden.css?v=20261027-1" />
+</head>
+<body class="is-loading" data-page="hidden">
+
+  <!-- ================= LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-word sc">Cachés</p>
+    <span class="ld-line"><i id="ldBar"></i></span>
+    <p class="ld-depth">descending &nbsp;<b id="ldDepth">−00</b> m</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__lens"></i><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= HEADER + RAILS ================= -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="logo" aria-label="L'Oubliette home">L'Oubliette<br />Paris</a>
+    <a href="index.html" class="hdr__more" data-cursor="back upstairs">Home</a>
+    <button class="hdr__menu" id="menuBtn" aria-expanded="false" aria-controls="menu" data-cursor="open"><i></i><i></i><i></i><span>menu</span></button>
+  </header>
+  <div class="rail rail--l" aria-hidden="true"><span class="rail__name" id="railName">Cachés</span><i class="rail__line"></i></div>
+  <div class="rail rail--yrs" aria-hidden="true">1533 — 2021</div>
+  <div class="rail rail--r" aria-hidden="true">The hidden wing</div>
+
+  <!-- ================= MENU ================= -->
+  <nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
+    <p class="menu__ghost" aria-hidden="true">Menu</p>
+    <button class="menu__close" id="menuClose" data-cursor="close">✕ <span>Close</span></button>
+    <ul class="menu__main">
+      <li><a href="index.html">Home</a><small>back up the stairs</small></li>
+      <li><a href="refused.html">Refusés</a><small>everything they sent back</small></li>
+      <li><a href="stolen.html">Volés</a><small>cut from their frames</small></li>
+      <li><a href="visit.html">Visit</a><small>one memory, no refunds</small></li>
+    </ul>
+    <div class="menu__side">
+      <a href="visit.html">Buy your tickets</a>
+      <a href="index.html">Back to the home</a>
+      <a href="keepers.html">Meet the keepers</a>
+      <a href="refused.html">The refused wing</a>
+      <a href="stolen.html">The stolen wing</a>
+      <p class="menu__hist">Cachés</p>
+      <p class="menu__guide">In this wing</p>
+      <ol class="menu__list">
+        <li>Hans Holbein the Younger (1497–1543)</li>
+        <li>Johannes Vermeer (1632–1675)</li>
+        <li>Leonardo da Vinci (1452–1519)</li>
+        <li>Diego Velázquez (1599–1660)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ========== 01 HERO: "жостово", flowers on black, the giant word behind ========== -->
+    <section class="chero" id="chero" data-rail="Cachés">
+      <p class="chero__brand sc">Cachés</p>
+      <nav class="chero__nav" aria-label="This wing">
+        <a href="#vanitas" data-jump>In plain sight</a>
+        <a href="#cupid" data-jump>Painted over</a>
+        <a href="#whale" data-jump>Painted out</a>
+      </nav>
+      <p class="chero__word sc" aria-hidden="true">Cachés</p>
+      <div class="chero__pic" id="cheroPic" data-cursor="x-ray">
+        <div class="slot" data-img="img/HIDDEN/hero.jpg" data-pos="50% 40%" data-label="HIDDEN/hero.jpg · Van Gogh, Still Life with Meadow Flowers and Roses, 1886–87"></div>
+        <div class="chero__xray" aria-hidden="true"><img src="img/HIDDEN/hero.jpg" alt="" /></div>
+      </div>
+      <p class="chero__cap">under these flowers there are <b>two wrestlers</b>, stripped to the waist. Van Gogh painted them in Antwerp, ran out of canvas and covered them up. the x-ray found them in 2012.</p>
+      <p class="chero__hint"><i></i>move the lamp</p>
+    </section>
+
+    <!-- ========== 02 VANITAS: the "vanity" poster, the anamorphic skull ========== -->
+    <section class="vani" id="vanitas" data-rail="In plain sight">
+      <div class="vani__pin">
+        <span class="vani__star vani__star--l" aria-hidden="true">✦</span>
+        <span class="vani__star vani__star--r" aria-hidden="true">✦</span>
+        <h2 class="vani__title script">Vanitas</h2>
+        <div class="vani__label" aria-hidden="true">
+          <span class="vani__cross">✝</span><span class="vani__lab">Holbein<small>[1533]</small></span><i class="vani__bar"></i>
+        </div>
+        <p class="vani__glyph vani__glyph--l" aria-hidden="true">memento mori</p>
+        <p class="vani__glyph vani__glyph--r" aria-hidden="true">○—○ stand on the right</p>
+        <div class="vani__stage" data-cursor="look from the side">
+          <div class="vani__img" id="vaniImg"><div class="slot" data-img="img/HIDDEN/skull.jpg" data-label="HIDDEN/skull.jpg · Holbein, The Ambassadors, 1533"></div></div>
+          <span class="vani__ring" aria-hidden="true"></span>
+        </div>
+        <p class="vani__cap"><b>The Ambassadors</b>, 1533. Two rich young men, a globe, a lute with a broken string, and across the floor a grey smear nobody explains to the dinner guests. Stand close to the wall, on the right, and the smear is a skull. scroll to stand there.</p>
+        <svg class="vani__emblem" viewBox="0 0 60 30" aria-hidden="true"><path d="M4 26 18 4l12 18L42 4l14 22M18 4v22M42 4v22" /></svg>
+      </div>
+    </section>
+
+    <!-- ========== 03 CUPID: the "romanticism" deck, cream slides ========== -->
+    <section class="cupi" id="cupid" data-rail="Painted over">
+      <div class="cupi__banner">
+        <div class="slot" data-img="img/HIDDEN/cupid-after.jpg" data-pos="50% 22%" data-label="HIDDEN/cupid-after.jpg · Vermeer, Girl Reading a Letter at an Open Window, after 2021"></div>
+        <h2 class="cupi__title">Cupid</h2>
+        <p class="cupi__sub sc">painted out by someone · scraped back by Dresden</p>
+        <span class="cupi__badge" aria-hidden="true">L'O</span>
+      </div>
+
+      <div class="cupi__grid">
+        <!-- table of contents -->
+        <article class="cslide cslide--toc">
+          <p class="cslide__vert">Table of<br />Contents</p>
+          <div class="slot" data-img="img/HIDDEN/cupid-before.jpg" data-pos="55% 55%" data-label="HIDDEN/cupid-before.jpg · Vermeer, Girl Reading a Letter, before 2017"></div>
+          <ol class="cslide__toc">
+            <li><b>01</b>Painted<small>Delft, around 1657</small></li>
+            <li><b>02</b>Covered<small>after he died, by another hand</small></li>
+            <li><b>03</b>X-rayed<small>1979, a cupid on the wall</small></li>
+            <li><b>04</b>Uncovered<small>2017 — 2021, by scalpel</small></li>
+          </ol>
+          <span class="cslide__mark" aria-hidden="true">L'O</span>
+        </article>
+
+        <!-- the timeline -->
+        <article class="cslide cslide--time">
+          <div class="ctime">
+            <i class="ctime__line"></i>
+            <div class="ctime__n ctime__n--up" style="--x: 6%"><div class="slot" data-img="img/HIDDEN/cupid-before.jpg" data-pos="60% 70%" data-label="before"></div><b>1657</b><small>a girl reads a letter. the wall behind her has a picture on it</small></div>
+            <div class="ctime__n ctime__n--dn" style="--x: 30%"><b>c. 1700</b><small>somebody paints the picture out. the wall goes blank</small></div>
+            <div class="ctime__n ctime__n--up" style="--x: 54%"><div class="slot ctime__xray" data-img="img/HIDDEN/cupid-after.jpg" data-pos="62% 18%" data-label="x-ray"></div><b>1979</b><small>the x-ray finds a naked boy with a bow</small></div>
+            <div class="ctime__n ctime__n--dn" style="--x: 78%"><b>2021</b><small>cupid is back, stepping on a mask</small></div>
+          </div>
+          <p class="cslide__t">The Timeline</p>
+          <span class="cslide__mark" aria-hidden="true">L'O</span>
+        </article>
+
+        <!-- the scalpel: drag to scrape -->
+        <article class="cslide cslide--scrape">
+          <div class="cslide__txt">
+            <p class="cslide__h">The scalpel</p>
+            <p>The overpaint went on decades after Vermeer died, over his own varnish. Not his idea, then. For four years a restorer took it off under a microscope, a few square millimetres a day.</p>
+            <p class="cslide__h">Your turn</p>
+            <p>Drag the blade across the wall.</p>
+          </div>
+          <div class="scrape" id="scrape" data-cursor="drag">
+            <div class="slot scrape__a" data-img="img/HIDDEN/cupid-after.jpg" data-pos="50% 30%" data-label="after"></div>
+            <div class="slot scrape__b" data-img="img/HIDDEN/cupid-before.jpg" data-pos="50% 30%" data-label="before"></div>
+            <span class="scrape__blade" aria-hidden="true"><i></i></span>
+            <input class="scrape__range" type="range" min="0" max="100" value="12" aria-label="scrape the overpaint" />
+          </div>
+          <span class="cslide__mark" aria-hidden="true">L'O</span>
+        </article>
+
+        <!-- three pictures -->
+        <article class="cslide cslide--three">
+          <div class="slot" data-img="img/HIDDEN/cupid-after.jpg" data-pos="52% 14%" data-label="cupid"></div>
+          <div class="slot cslide__tall" data-img="img/HIDDEN/cupid-before.jpg" data-pos="60% 60%" data-label="the girl"></div>
+          <div class="slot" data-img="img/HIDDEN/cupid-after.jpg" data-pos="50% 92%" data-label="the fruit"></div>
+          <div class="cslide__txt">
+            <p class="cslide__h">Who did it</p>
+            <p>Nobody knows. Maybe a dealer who thought a naked boy wouldn't sell. Maybe a taste that changed. The girl kept reading either way.</p>
+          </div>
+          <span class="cslide__mark" aria-hidden="true">L'O</span>
+        </article>
+
+        <!-- thank you, dark -->
+        <article class="cslide cslide--dark">
+          <div class="slot" data-img="img/HIDDEN/cupid-after.jpg" data-pos="50% 40%" data-label="HIDDEN/cupid-after.jpg"></div>
+          <div class="cslide__txt">
+            <p class="cslide__h">Thank you for waiting</p>
+            <p>— he waited about three hundred years.</p>
+            <p>— he is the same cupid that hangs in another Vermeer, <i>A Young Woman Standing at a Virginal</i>, in London.</p>
+            <p>— he is stepping on a mask. make of that what you like.</p>
+          </div>
+          <span class="cslide__mark" aria-hidden="true">L'O</span>
+        </article>
+
+        <!-- numbers -->
+        <article class="cslide cslide--nums">
+          <ul class="cnums">
+            <li><b data-count="1979">1979</b><span>X-ray<small>the first to see him again</small></span></li>
+            <li><b data-count="4">4</b><span>Years<small>of scalpel, under a microscope</small></span></li>
+            <li><b data-count="2">2</b><span>Vermeers<small>with the same cupid in them</small></span></li>
+          </ul>
+          <div class="slot" data-img="img/HIDDEN/cupid-after.jpg" data-pos="50% 86%" data-label="HIDDEN/cupid-after.jpg"></div>
+          <span class="cslide__mark" aria-hidden="true">L'O</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 04 CERCA TROVA: the "step 0 / legal & structural" deck ========== -->
+    <section class="cerca" id="anghiari" data-rail="Cerca trova">
+      <div class="cerca__bg" aria-hidden="true"><img src="img/HIDDEN/vasari.jpg" alt="" /></div>
+      <div class="cerca__head">
+        <p>A case for the wall<br />Palazzo Vecchio, Florence</p>
+        <p>Dug by:<br />Maurizio Seracini, 2012</p>
+      </div>
+
+      <div class="cerca__deck">
+        <article class="dslide dslide--cover">
+          <div class="slot" data-img="img/HIDDEN/vasari.jpg" data-pos="50% 55%" data-label="HIDDEN/vasari.jpg · Vasari, The Battle of Marciano, 1563–65" data-cursor="behind this?"></div>
+          <div class="dslide__cover">
+            <p class="sc">— 1505 —</p>
+            <p class="script">Cerca trova</p>
+          </div>
+        </article>
+
+        <article class="dslide dslide--map">
+          <p class="dslide__no">02</p>
+          <h3 class="dslide__t"><span class="script">T</span>wo <span class="script">B</span>attles</h3>
+          <p class="dslide__vert dslide__vert--l">1505</p>
+          <p class="dslide__vert dslide__vert--r">1563</p>
+          <div class="dmap">
+            <svg class="dmap__svg" viewBox="0 0 800 260" preserveAspectRatio="none" aria-hidden="true">
+              <ellipse class="dmap__ring" cx="400" cy="130" rx="380" ry="112" pathLength="1" />
+              <line class="dmap__axis" x1="20" y1="130" x2="780" y2="130" pathLength="1" />
+              <path class="dmap__head" d="M762 122 780 130 762 138" />
+              <circle class="dmap__dot" cx="20" cy="130" r="5" />
+              <circle class="dmap__dot dmap__dot--r" cx="780" cy="130" r="5" />
+              <line class="dmap__mid" x1="400" y1="18" x2="400" y2="242" />
+            </svg>
+            <div class="dmap__col"><p class="dmap__k script">Leonardo</p><p>paints the Battle of Anghiari on the council hall wall, trying an oil technique of his own. The colours run. He leaves for Milan with it half done.</p></div>
+            <div class="dmap__col"><p class="dmap__k script">Vasari</p><p>remodels the hall for the Medici and covers the walls with his own battles. He admired Leonardo. On a green flag he paints two tiny words.</p></div>
+          </div>
+          <div class="dslide__foot">
+            <p><b>What we have</b><br />— copies, drawings, a horse's head<br />— one painted flag</p>
+            <p><b>What we don't</b><br />— the wall behind the wall<br />— permission to look</p>
+          </div>
+        </article>
+
+        <article class="dslide dslide--copy">
+          <div class="slot" data-img="img/HIDDEN/rubens.jpg" data-pos="50% 50%" data-label="HIDDEN/rubens.jpg · Rubens, after Leonardo, The Battle of Anghiari, c. 1603" data-cursor="a copy of a copy"></div>
+          <h3 class="dslide__t"><span class="script">C</span>opy <small class="dslide__num">II</small></h3>
+          <div class="dslide__glass">
+            <p><b>Contents:</b><br />Rubens never saw the original. He drew it a century later from someone else's copy, and this is the best record we have of what Leonardo put on the wall.</p>
+            <p><b>Result:</b><br />four horsemen fighting over a flag, faces like masks, a horse biting another horse.</p>
+          </div>
+        </article>
+
+        <article class="dslide dslide--word">
+          <p class="dslide__no">04</p>
+          <p class="dslide__big" aria-label="Trova">Trova</p>
+          <p class="dslide__def">TROVA [it.] — (he, she) finds. painted on a flag, 12 m up, by Vasari.</p>
+          <div class="dslide__cols">
+            <p>In 2011 a team drilled a few small holes through cracks in Vasari's fresco and slid a camera behind it. They found a gap, and on the far wall a black pigment close to the one Leonardo used on the Mona Lisa.</p>
+            <p>Then the drilling was stopped: you don't make holes in a Vasari to look for a Leonardo. The probe came out. Both are still there, one in front of the other.</p>
+          </div>
+          <div class="dslide__drill" id="drill" aria-hidden="true">
+            <div class="slot" data-img="img/HIDDEN/cerca.jpg" data-pos="50% 40%" data-label="HIDDEN/cerca.jpg · the flag: cerca trova"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 05 RAGE: the red-framed poster ========== -->
+    <section class="rage" id="rage" data-rail="Rage">
+      <div class="rage__poster">
+        <span class="rage__knob rage__knob--l" aria-hidden="true"></span>
+        <span class="rage__knob rage__knob--r" aria-hidden="true"></span>
+        <div class="rage__pic">
+          <div class="slot" data-img="img/HIDDEN/venus.jpg" data-pos="72% 55%" data-label="HIDDEN/venus.jpg · Velázquez, The Rokeby Venus, 1647–51" data-cursor="seven cuts"></div>
+          <svg class="rage__cuts" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M120 250 L178 330" pathLength="1" />
+            <path d="M150 236 L214 300" pathLength="1" />
+            <path d="M196 268 L238 360" pathLength="1" />
+            <path d="M232 250 L262 318" pathLength="1" />
+            <path d="M108 300 L170 392" pathLength="1" />
+            <path d="M246 330 L300 380" pathLength="1" />
+            <path d="M214 376 L244 448" pathLength="1" />
+          </svg>
+          <svg class="rage__star" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4C54 38 62 46 96 50 62 54 54 62 50 96 46 62 38 54 4 50 38 46 46 38 50 4Z" /></svg>
+        </div>
+        <span class="rage__spark" aria-hidden="true">✦</span>
+        <h2 class="rage__title sc">Rage</h2>
+        <p class="rage__tag">Be afraid of a patient woman<br />with a meat cleaver up her sleeve.</p>
+        <figure class="rage__ev" data-cursor="evidence">
+          <div class="slot" data-img="img/HIDDEN/venus-1914.jpg" data-pos="40% 60%" data-label="HIDDEN/venus-1914.jpg · the Venus after the attack, 1914"></div>
+          <figcaption>evidence · 10.03.1914</figcaption>
+        </figure>
+        <p class="rage__txt">On 10 March 1914 Mary Richardson walked into the National Gallery and cut the Rokeby Venus seven times. She said she had damaged the most beautiful woman in mythology because the government was destroying Mrs Pankhurst, the most beautiful character in modern history. Years later she added that she hadn't liked the way men gaped at it all day. The cuts were mended within months. <b>They are still there, under the retouching.</b></p>
+        <p class="rage__by">— <span id="rageCount">0</span> / 7</p>
+      </div>
+    </section>
+
+    <!-- ========== 06 THE WHALE: the "emese sabo" cards on satin ========== -->
+    <section class="whale" id="whale" data-rail="Painted out">
+      <p class="whale__side whale__side--l">Hendrick van Anthonissen<br /><i>View of Scheveningen Sands</i>, c. 1641<br />Fitzwilliam Museum, Cambridge</p>
+      <div class="whale__cards">
+        <article class="wcard" id="wcard" data-cursor="clean it">
+          <div class="slot wcard__a" data-img="img/HIDDEN/whale-before.jpg" data-pos="50% 50%" data-label="HIDDEN/whale-before.jpg · before 2014"></div>
+          <div class="slot wcard__b" data-img="img/HIDDEN/whale-after.jpg" data-pos="50% 50%" data-label="HIDDEN/whale-after.jpg · after 2014"></div>
+          <span class="wcard__swab" aria-hidden="true"></span>
+          <div class="wcard__logo">
+            <svg viewBox="0 0 60 40" aria-hidden="true"><path d="M6 24c8-12 30-14 40-4 4 4 6 2 8-4 0 8-2 12-8 14-12 4-30 4-40-6z" /><path d="M30 12c0-4 2-6 4-8M32 12c2-3 5-4 8-4" /></svg>
+            <span class="wcard__dots"><small>CAM</small><small>1641</small></span>
+            <p class="sc">L'Oubliette</p>
+            <small>cachés · scheveningen</small>
+          </div>
+        </article>
+        <article class="wcard wcard--zoom" data-cursor="hello">
+          <div class="slot" data-img="img/HIDDEN/whale-after.jpg" data-pos="64% 62%" data-label="HIDDEN/whale-after.jpg · the whale"></div>
+          <div class="wcard__logo">
+            <svg viewBox="0 0 60 40" aria-hidden="true"><path d="M6 24c8-12 30-14 40-4 4 4 6 2 8-4 0 8-2 12-8 14-12 4-30 4-40-6z" /><path d="M30 12c0-4 2-6 4-8M32 12c2-3 5-4 8-4" /></svg>
+            <span class="wcard__dots"><small>CAM</small><small>2014</small></span>
+            <p class="sc">L'Oubliette</p>
+            <small>the whale · found again</small>
+          </div>
+        </article>
+      </div>
+      <p class="whale__side whale__side--r">A crowd on a beach, looking at nothing. In 2014 a conservator, Shan Kuang, started cleaning the varnish and a man appeared standing on air, then a whale under him. Someone had painted the dead whale out, probably because a rotting fish is bad for the dining room.<b>scroll to clean it</b></p>
+    </section>
+
+    <!-- ========== 07 NEXT WING ========== -->
+    <section class="next" id="next" data-rail="Next wing">
+      <p class="next__k">Next wing</p>
+      <a class="next__arch arch" href="keepers.html" data-cursor="the keepers">
+        <div class="slot" data-img="img/HOME/keeper-oubli.jpg" data-label="HOME/keeper-oubli.jpg · Oubli"></div>
+      </a>
+      <p class="next__word script" data-split>Gardiens</p>
+      <p class="next__sub">three borzois, one job: making sure you forget everything you saw down here.</p>
+    </section>
+
+    <!-- ========== FOOTER: persephone ========== -->
+    <footer class="ft">
+      <div class="ft__poster">
+        <div class="ft__pic"><div class="slot" data-img="img/HOME/footer.jpg" data-pos="50% 25%" data-label="HOME/footer.jpg · Rossetti, Proserpine, 1874" data-cursor="eight attempts"></div></div>
+        <div class="ft__col">
+          <span class="ft__star" aria-hidden="true">✦</span>
+          <div class="ft__cols">
+            <ul class="ft__side" aria-hidden="true"><li>refused</li><li>○</li><li>stolen</li><li>○</li><li>hidden</li><li>○</li><li>kept</li></ul>
+            <p class="ft__word script">l'oubliette</p>
+            <ul class="ft__side" aria-hidden="true"><li>upstairs</li><li>○</li><li>and</li><li>○</li><li>down</li><li>○</li><li>here</li></ul>
+          </div>
+          <span class="ft__star" aria-hidden="true">✦</span>
+        </div>
+      </div>
+      <div class="ft__grid">
+        <div><p class="ft__k">The museum</p><a href="index.html">Home</a><a href="refused.html">The refused</a><a href="stolen.html">The stolen</a><a href="keepers.html">The keepers</a></div>
+        <div><p class="ft__k">This wing</p><a href="#vanitas" data-jump>Vanitas</a><a href="#cupid" data-jump>Cupid</a><a href="#anghiari" data-jump>Cerca trova</a><a href="#rage" data-jump>Rage</a><a href="#whale" data-jump>The whale</a></div>
+        <div><p class="ft__k">Paris, upstairs</p><span class="ft__clock" data-clock>00:00</span><span id="doors">the candles are lit.</span></div>
+        <div class="ft__up"><a href="#top" data-jump data-cursor="back up">Back up the stairs ↑</a></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 L'Oubliette — a concept. the works and what was hidden in them are real. the museum isn't.</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261027-1"></script>
+  <script src="js/hidden.js?v=20261027-1"></script>
+</body>
+  <!--
+   *    /\_/\      ✦
+       ( o.o )   <3  ghostly.grl
+   ✦    > ^ <   🕯     *
+-->
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>L'OUBLIETTE — the museum of everything they said no to</title>
+  <meta name="description" content="L'Oubliette is a museum fourteen metres under Paris. It keeps the works the great museums refused, lost, painted over or let be stolen. Three borzois guard them." />
+  <meta name="theme-color" content="#120d0a" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Monsieur+La+Doulaise&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261026-9" />
+  <link rel="stylesheet" href="css/home.css?v=20261026-9" />
+</head>
+<body class="is-loading" data-page="home">
+
+  <!-- ================= LOADER: down the stairs, -00 m to -14 m ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-word sc">L'Oubliétte</p>
+    <span class="ld-line"><i id="ldBar"></i></span>
+    <p class="ld-depth">descending &nbsp;<b id="ldDepth">−00</b> m</p>
+  </div>
+
+  <!-- global fx -->
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__lens"></i><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= HEADER + SIDE RAILS (göteborg chrome) ================= -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="logo" aria-label="L'Oubliette home">L'Oubliette<br />Paris</a>
+    <a href="#hero" class="hdr__more" data-jump data-cursor="go back up">Show more</a>
+    <button class="hdr__menu" id="menuBtn" aria-expanded="false" aria-controls="menu" data-cursor="open"><i></i><i></i><i></i><span>menu</span></button>
+  </header>
+  <div class="rail rail--l" aria-hidden="true"><span class="rail__name" id="railName">Home</span><i class="rail__line"></i></div>
+  <div class="rail rail--yrs" aria-hidden="true">1602 — 2026</div>
+  <div class="rail rail--r" aria-hidden="true">Your forgetting</div>
+
+  <!-- ================= MENU (the göteborg cream menu, giant ghost word) ================= -->
+  <nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
+    <p class="menu__ghost" aria-hidden="true">Menu</p>
+    <button class="menu__close" id="menuClose" data-cursor="close">✕ <span>Close</span></button>
+    <ul class="menu__main">
+      <li><a href="refused.html">Refusés</a><small>everything they sent back</small></li>
+      <li><a href="stolen.html">Volés</a><small>cut from their frames</small></li>
+      <li><a href="hidden.html">Cachés</a><small>painted over, still there</small></li>
+      <li><a href="visit.html">Visit</a><small>one memory, no refunds</small></li>
+    </ul>
+    <div class="menu__side">
+      <a href="visit.html">Buy your tickets</a>
+      <a href="refused.html">Learn about the exhibition</a>
+      <a href="keepers.html">Meet the keepers</a>
+      <a href="stolen.html">The stolen wing</a>
+      <a href="hidden.html">The hidden wing</a>
+      <p class="menu__hist">Scandale</p>
+      <p class="menu__guide">Our guide</p>
+      <ol class="menu__list">
+        <li>Michelangelo Merisi da Caravaggio (1571–1610)</li>
+        <li>Édouard Manet (1832–1883)</li>
+        <li>Gustave Courbet (1819–1877)</li>
+        <li>Marcel Duchamp (1887–1968)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ========== 01 HERO: göteborg "baróque art" ========== -->
+    <section class="hero" id="hero" data-rail="Home">
+      <div class="hero__bg"><div class="slot" data-img="img/HOME/hero.jpg" data-pos="50% 60%" data-label="HOME/hero.jpg · Caravaggio, Death of the Virgin, 1601–06 (detail: red drapery, the women weeping). refused by the Carmelites"></div></div>
+      <div class="hero__center">
+        <h1 class="hero__title sc" data-split>L'Oubliétte</h1>
+        <span class="hero__rule"></span>
+        <p class="hero__sub sc">2026 Musée des Refusés, Paris</p>
+      </div>
+      <div class="hero__links">
+        <a href="#refuses" data-jump><span>Best impressions</span><small>48 pictures</small></a>
+        <a href="#contacts" data-jump data-mag><span>Buy your tickets</span><small>one memory</small></a>
+        <a href="#about" data-jump><span>Learn about the exhibition</span><small>−14 m</small></a>
+      </div>
+      <p class="hero__peek sc" aria-hidden="true">About Ús</p>
+    </section>
+
+    <!-- ========== 02 MÚSE → REFUSÉS: göteborg horizontal gallery ========== -->
+    <section class="muse" id="refuses" data-rail="Refusés">
+      <div class="muse__bg"><div class="slot" data-img="img/HOME/muse-bg.jpg" data-pos="55% 62%" data-label="HOME/muse-bg.jpg · Cabanel, The Birth of Venus, 1863 (detail of the pink sea): the painting that WON the year Manet was refused"></div></div>
+      <div class="muse__pin">
+        <h2 class="muse__word" data-split>Refusés</h2>
+        <div class="muse__track" id="museTrack"><!-- cards from js/home.js --></div>
+        <p class="muse__hint">Show more</p>
+      </div>
+    </section>
+
+    <!-- ========== 03 CREAM COLLAGE: göteborg "múse / rococo" sheet ========== -->
+    <section class="sheet cream" id="voles" data-rail="Volés">
+      <svg class="sheet__ribbon" viewBox="0 0 1400 800" preserveAspectRatio="none" aria-hidden="true">
+        <path class="rb rb--edge" pathLength="1" d="M-40 640C140 760 300 520 250 380S420 120 560 230 540 560 760 520 980 120 1120 210 1210 600 1460 420" />
+        <path class="rb rb--body" pathLength="1" d="M-40 640C140 760 300 520 250 380S420 120 560 230 540 560 760 520 980 120 1120 210 1210 600 1460 420" />
+        <path class="rb rb--shine" pathLength="1" d="M-40 640C140 760 300 520 250 380S420 120 560 230 540 560 760 520 980 120 1120 210 1210 600 1460 420" />
+      </svg>
+      <p class="sheet__ghost-top sc" aria-hidden="true">L'Oubliétte</p>
+      <span class="sheet__yrs">1911 — 2010</span>
+      <div class="sheet__a"><div class="slot" data-img="img/HOME/voles-01.jpg" data-label="HOME/voles-01.jpg · Rembrandt, The Storm on the Sea of Galilee, 1633: stolen from the Gardner, 1990"></div></div>
+      <h2 class="sheet__word" data-split>Volés</h2>
+      <div class="sheet__b"><div class="slot" data-img="img/HOME/voles-02.jpg" data-label="HOME/voles-02.jpg · Caravaggio, Nativity with St Francis and St Lawrence, 1609: cut from its frame in Palermo, 1969"></div></div>
+      <div class="sheet__c" data-cursor="she was gone 2 years"><div class="slot" data-img="img/HOME/voles-03.jpg" data-label="HOME/voles-03.jpg · the empty wall in the Salon Carré, Louvre, 22 August 1911 (real press photo)"></div></div>
+      <div class="sheet__d"><div class="slot" data-img="img/HOME/voles-04.jpg" data-label="HOME/voles-04.jpg · Cézanne, View of Auvers-sur-Oise, c. 1880: stolen from the Ashmolean, 1999"></div></div>
+      <p class="sheet__touch glass">Still missing<small>5 pictures, cut from their frames between 1911 and 2010</small></p>
+      <div class="sheet__e"><div class="slot" data-img="img/HOME/voles-05.jpg" data-label="HOME/voles-05.jpg · Van Gogh, Poppy Flowers, 1887: stolen in Cairo, 2010"></div></div>
+      <p class="sheet__ghost-bot script" aria-hidden="true">Cachés</p>
+    </section>
+
+    <!-- ========== 04 FEATURED: göteborg "rembrandt / abraham and isaac" ========== -->
+    <section class="feat" id="feat" data-rail="Featured">
+      <div class="feat__stage">
+        <div class="feat__pics">
+          <div class="feat__pic is-on"><div class="slot" data-img="img/HOME/feat-01.jpg" data-pos="50% 40%" data-label="HOME/feat-01.jpg · Courbet, The Painter's Studio, 1855 (vertical detail)"></div></div>
+          <div class="feat__pic"><div class="slot" data-img="img/HOME/feat-02.jpg" data-pos="50% 30%" data-label="HOME/feat-02.jpg · Whistler, Symphony in White, No. 1, 1862"></div></div>
+          <div class="feat__pic"><div class="slot" data-img="img/HOME/feat-03.jpg" data-label="HOME/feat-03.jpg · Klimt, Philosophy, 1899–1907 (b/w photo, the painting burned in 1945)"></div></div>
+          <div class="feat__glass" aria-hidden="true"></div>
+        </div>
+        <div class="feat__l">
+          <h3 class="feat__who sc" id="featWho">Courbet</h3>
+          <p class="feat__city sc" id="featCity">Ornans</p>
+          <a href="#about" data-jump class="feat__about">About</a>
+        </div>
+        <div class="feat__r">
+          <h3 class="feat__what" id="featWhat">L'Atelier</h3>
+          <p class="feat__yr"><i></i><span id="featYr">XIX</span></p>
+          <p class="feat__why glass" id="featWhy">refused in 1855. so he built his own pavilion next door.</p>
+        </div>
+        <button class="feat__next" id="featNext" data-cursor="next refusal">Next <i></i></button>
+        <p class="feat__count"><b id="featN">01</b> / 03</p>
+      </div>
+    </section>
+
+    <!-- ========== 05 THREE WINGS: the ophelia arches ========== -->
+    <section class="wings" id="wings" data-rail="Wings">
+      <div class="wings__top"><span>L'Oubliette</span><span>1602 — 2026</span></div>
+      <div class="wings__arches">
+        <a class="arch arch--l" href="refused.html" data-cursor="the refused">
+          <div class="slot" data-img="img/HOME/wing-refused.jpg" data-label="HOME/wing-refused.jpg · Caravaggio, Saint Matthew and the Angel, 1602 (first version, destroyed 1945)"></div>
+        </a>
+        <a class="arch arch--c" href="stolen.html" data-cursor="the stolen">
+          <div class="slot" data-img="img/HOME/wing-stolen.jpg" data-label="HOME/wing-stolen.jpg · Vermeer, The Concert, c. 1664: stolen 1990, still missing"></div>
+        </a>
+        <a class="arch arch--r" href="hidden.html" data-cursor="the hidden">
+          <div class="slot" data-img="img/HOME/wing-hidden.jpg" data-label="HOME/wing-hidden.jpg · Picasso, The Blue Room, 1901: a man is painted underneath"></div>
+        </a>
+        <p class="wings__word" data-split aria-label="Oubliette">OUBLIETTE</p>
+      </div>
+      <div class="wings__foot">
+        <span>Three wings<br />Details</span>
+        <span>Refused<br />Stolen · Hidden</span>
+        <svg class="wings__seal" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" /><path d="M30 13a9 9 0 0 1 5 16.5L38.5 46h-17L25 29.5A9 9 0 0 1 30 13z" /></svg>
+        <span>2026</span>
+        <span>L'Oubliette®<br />©No rights reserved</span>
+      </div>
+    </section>
+
+    <!-- ========== 06 ABOUT ÚS: göteborg dark text screen ========== -->
+    <section class="about" id="about" data-rail="About Us">
+      <h2 class="about__title sc" data-split>About Ús</h2>
+      <div class="about__txt">
+        <p>For as long as there have been museums, there have been juries, and for as long as there have been juries there has been a staircase going down. L'Oubliette is at the bottom of it.</p>
+        <p>We keep what the Salon sent home, what the Church refused to hang, what thieves cut from its frame and what painters covered with something more sellable. Every work is real. Every refusal happened.</p>
+        <p>We don't restore. We don't apologise. We remember, which is more than anyone else did.</p>
+      </div>
+      <div class="about__links">
+        <a href="refused.html">Consult the program</a>
+        <a href="#scandale" data-jump>The scandal</a>
+        <a href="#keepers" data-jump>Meet the keepers</a>
+      </div>
+      <p class="about__scroll">scroll down</p>
+      <p class="about__peek sc" aria-hidden="true">Painters</p>
+    </section>
+
+    <!-- ========== 07 PAINTERS: göteborg "federico barocci / bartolomeo cesi" ========== -->
+    <section class="painters" id="painters" data-rail="Painters">
+      <div class="painters__bg"><div class="slot" data-img="img/HOME/painters.jpg" data-pos="50% 42%" data-label="HOME/painters.jpg · Caravaggio, The Calling of Saint Matthew, 1599–1600 (wide, dark, a beam of light)"></div></div>
+      <div class="painters__pin">
+        <div class="painters__head">
+          <h2 class="sc">Painters</h2>
+          <ul class="painters__filters" id="pFilters">
+            <li class="is-on" data-f="all">All</li><li data-f="fr">French</li><li data-f="it">Italian</li><li data-f="us">American</li><li data-f="at">Austrian</li>
+          </ul>
+        </div>
+        <div class="painters__track" id="pTrack"><!-- names from js/home.js --></div>
+        <div class="painters__cent">
+          <p class="painters__xvi">XIX</p>
+          <p>In 1863 the Paris Salon refused more than three thousand works. The emperor, annoyed by the complaints, let them be shown next door. Paris came to laugh, and stayed to look.</p>
+        </div>
+        <p class="painters__scroll">Scroll right <i>☞</i></p>
+      </div>
+    </section>
+
+    <!-- ========== 08 THE KEEPERS: lady with an ermine, behind a frosted pane ========== -->
+    <section class="keep" id="keepers" data-rail="Keepers">
+      <div class="keep__pin">
+        <div class="keep__pics">
+          <div class="keep__pic is-on"><div class="slot" data-img="img/HOME/keeper-oubli.jpg" data-label="HOME/keeper-oubli.jpg · grey-and-white borzoi on a velvet armchair, dark room" data-cursor="do not sit here"></div></div>
+          <div class="keep__pic"><div class="slot" data-img="img/HOME/keeper-rancune.jpg" data-label="HOME/keeper-rancune.jpg · white borzoi close-up on black" data-cursor="he remembers you"></div></div>
+          <div class="keep__pic"><div class="slot" data-flip data-img="img/HOME/keeper-pardon.jpg" data-label="HOME/keeper-pardon.jpg · two cream borzois leaning on each other" data-cursor="good boys. both."></div></div>
+        </div>
+        <div class="keep__glass" aria-hidden="true"></div>
+        <div class="keep__txt">
+          <p class="keep__medium" id="keepMedium">Borzoi on green velvet</p>
+          <h3 class="keep__name" id="keepName">Oubli, head keeper</h3>
+          <p class="keep__who"><span id="keepWho">L'Oubliette</span><small id="keepWhere">Paris, fourteen metres down</small></p>
+          <p class="keep__yrs" id="keepYrs"><span>2017</span><span>2026</span></p>
+        </div>
+        <p class="keep__count"><b id="keepN">01</b> / 03</p>
+      </div>
+    </section>
+
+    <!-- ========== 09 SCANDALE: the "seductive" poster, red velvet and gold ========== -->
+    <section class="sedu" id="scandale" data-rail="Scandale">
+      <div class="sedu__stage">
+        <div class="sedu__top">
+          <span class="sedu__pill">refusée</span>
+          <span class="sedu__star" aria-hidden="true">✦</span>
+          <span class="sedu__pill">guarded</span>
+        </div>
+        <p class="sedu__col sedu__col--l">Scandal, n. what happens when a painting looks back. In 1863 the jury sent her home. In 1865 they hung her, and had to post two guards beside her, because Paris kept trying to hit her with umbrellas.</p>
+        <p class="sedu__col sedu__col--r">“She is not a goddess. She is not a nymph. She is a woman in a room, and she knows exactly who just walked in.” <span>— the keepers</span></p>
+        <div class="sedu__fig">
+          <div class="slot" data-img="img/HOME/scandale.jpg" data-pos="50% 55%" data-label="HOME/scandale.jpg · Manet, Olympia, 1863: the 1865 Salon had to guard her" data-cursor="she looks back"></div>
+        </div>
+        <svg class="sedu__word" viewBox="0 0 1200 360" aria-label="Scandale"><text x="600" y="250" text-anchor="middle">Scandale</text></svg>
+        <p class="sedu__sub">— having caused a public outrage, twice —</p>
+        <p class="sedu__body" data-words>Every refusal in this building started the same way: someone looked for less than a second, felt something they didn't order, and blamed the painting.</p>
+        <div class="sedu__bars" aria-hidden="true"><i></i><i></i></div>
+        <span class="sedu__dot sedu__dot--l" aria-hidden="true"></span><span class="sedu__dot sedu__dot--r" aria-hidden="true"></span>
+        <p class="sedu__rating" aria-hidden="true"><b>R</b><span>refused<br />jury discretion advised</span></p>
+        <span class="sedu__spark s1" aria-hidden="true">✦</span><span class="sedu__spark s2" aria-hidden="true">✧</span><span class="sedu__spark s3" aria-hidden="true">✦</span><span class="sedu__spark s4" aria-hidden="true">✧</span><span class="sedu__spark s5" aria-hidden="true">✦</span>
+      </div>
+    </section>
+
+    <!-- ========== 10 TICKETS: the "secret society" frame ========== -->
+    <section class="soc" id="contacts" data-rail="Tickets">
+      <div class="soc__bg"><div class="slot" data-img="img/HOME/society.jpg" data-pos="50% 40%" data-label="HOME/society.jpg · Charles Le Brun, ceiling of the Hall of Mirrors, Versailles, 1678–84"></div></div>
+      <div class="soc__frame">
+        <svg class="soc__corner c1" viewBox="0 0 70 70" aria-hidden="true"><path d="M6 64V26C6 14 14 6 26 6h38M18 52c0-16 7-29 25-33M27 34c7 2 9 9 4 13s-11 0-9-7M6 64c4-6 10-8 14-6M64 6c-6 4-8 10-6 14" /></svg>
+        <svg class="soc__corner c2" viewBox="0 0 70 70" aria-hidden="true"><path d="M6 64V26C6 14 14 6 26 6h38M18 52c0-16 7-29 25-33M27 34c7 2 9 9 4 13s-11 0-9-7M6 64c4-6 10-8 14-6M64 6c-6 4-8 10-6 14" /></svg>
+        <svg class="soc__corner c3" viewBox="0 0 70 70" aria-hidden="true"><path d="M6 64V26C6 14 14 6 26 6h38M18 52c0-16 7-29 25-33M27 34c7 2 9 9 4 13s-11 0-9-7M6 64c4-6 10-8 14-6M64 6c-6 4-8 10-6 14" /></svg>
+        <svg class="soc__corner c4" viewBox="0 0 70 70" aria-hidden="true"><path d="M6 64V26C6 14 14 6 26 6h38M18 52c0-16 7-29 25-33M27 34c7 2 9 9 4 13s-11 0-9-7M6 64c4-6 10-8 14-6M64 6c-6 4-8 10-6 14" /></svg>
+
+        <h2 class="soc__title">
+          <span class="soc__the script">The</span>
+          <span class="soc__big" data-split>Forgetting</span>
+          <span class="soc__big soc__big--2" data-split>Society</span>
+          <span class="soc__of">of things you'd rather not keep</span>
+        </h2>
+
+        <div class="soc__badge" id="badge" data-cursor="drop it here"><span>too<br />good<br />to<br />remember</span></div>
+
+        <p class="soc__price">Admission: one thing you'd like to forget.</p>
+        <form class="forget" id="forget" autocomplete="off">
+          <input id="forgetIn" maxlength="48" placeholder="leave it here" aria-label="something to forget" />
+          <button data-mag data-cursor="drop it">Drop it in</button>
+        </form>
+        <p class="forget__count"><b id="forgotN">1,208</b> things forgotten down here</p>
+
+        <div class="soc__info">
+          <p><span>Hours</span>open whenever you've lost something<br />closed on the days you remember</p>
+          <p><span>Entrance</span>the door marked “staff only”<br />Cour Carrée, Paris, −14 m</p>
+          <p><span>Dogs</span>yours stay upstairs<br />ours are already down here</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER: persephone, life and death sideways ========== -->
+    <footer class="ft">
+      <div class="ft__poster">
+        <div class="ft__pic"><div class="slot" data-img="img/HOME/footer.jpg" data-pos="50% 25%" data-label="HOME/footer.jpg · Rossetti, Proserpine, 1874: begun eight times, most of them abandoned" data-cursor="eight attempts"></div></div>
+        <div class="ft__col">
+          <span class="ft__star" aria-hidden="true">✦</span>
+          <div class="ft__cols">
+            <ul class="ft__side" aria-hidden="true"><li>refused</li><li>○</li><li>stolen</li><li>○</li><li>hidden</li><li>○</li><li>kept</li></ul>
+            <p class="ft__word script">l'oubliette</p>
+            <ul class="ft__side" aria-hidden="true"><li>upstairs</li><li>○</li><li>and</li><li>○</li><li>down</li><li>○</li><li>here</li></ul>
+          </div>
+          <span class="ft__star" aria-hidden="true">✦</span>
+        </div>
+      </div>
+      <div class="ft__grid">
+        <div><p class="ft__k">The museum</p><a href="visit.html">Visit</a><a href="refused.html">The refused</a><a href="stolen.html">The stolen</a><a href="keepers.html">The keepers</a></div>
+        <div><p class="ft__k">This page</p><a href="#refuses" data-jump>Refusés</a><a href="#voles" data-jump>Volés</a><a href="#scandale" data-jump>Scandale</a><a href="#contacts" data-jump>Tickets</a></div>
+        <div><p class="ft__k">Paris, upstairs</p><span class="ft__clock" data-clock>00:00</span><span id="doors">the candles are lit.</span></div>
+        <div class="ft__up"><a href="#top" data-jump data-cursor="back up">Back up the stairs ↑</a></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 L'Oubliette — a concept. the works and their refusals are real. the museum isn't.</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261026-9"></script>
+  <script src="js/home.js?v=20261026-9"></script>
+</body>
+  <!--
+   *    /\_/\      ✦
+       ( o.o )   <3  ghostly.grl
+   ✦    > ^ <   🕯     *
+-->
+</html>

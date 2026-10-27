@@ -1,0 +1,185 @@
+/* =========================================================
+   L'OUBLIETTE — refused.css
+   the refused wing: the louvre landing, then the göteborg screens the home didn't use
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* ========== 01 HERO: "welcome to the louvre" ========== */
+.rhero { position: relative; height: 100svh; min-height: 680px; overflow: hidden; background: radial-gradient(ellipse 60% 70% at 50% 62%, #3a2620 0%, #1c1210 55%, var(--dark) 100%); }
+.rhero__title { position: absolute; left: 0; right: 0; top: 12svh; z-index: 1; text-align: center; font-size: clamp(40px, 7.6vw, 150px); line-height: .98; letter-spacing: .02em; }
+.rhero__title > span { display: block; white-space: nowrap; }
+.rhero__fig {
+  position: absolute; left: 50%; bottom: 0; z-index: 2; width: clamp(320px, 38vw, 620px); height: 84svh; transform: translateX(-50%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 62% at 50% 46%, #000 52%, transparent 100%); mask-image: radial-gradient(ellipse 50% 62% at 50% 46%, #000 52%, transparent 100%);
+}
+.rhero__fig .slot { width: 100%; height: 100%; background: transparent; }
+.rhero__fig .slot:not(.has-img) { background: radial-gradient(ellipse 60% 70% at 50% 40%, #5a3529, transparent 75%); }
+.rhero__fig .slot-label { text-align: center; bottom: 14%; }
+.rhero__pic { position: absolute; z-index: 3; box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
+.rhero__pic .slot { width: 100%; height: 100%; }
+.rhero__pic .slot-label small { display: none; }
+.rhero__pic--l { left: 13vw; top: 38svh; width: clamp(130px, 12vw, 210px); aspect-ratio: 3 / 4.3; }
+.rhero__pic--r { right: 10vw; top: 62svh; width: clamp(170px, 17vw, 300px); aspect-ratio: 4 / 3.1; }
+.rhero__txt { position: absolute; z-index: 3; max-width: 30ch; font-size: 12.5px; line-height: 1.5; color: rgba(243, 230, 220, .82); }
+.rhero__txt em { font-style: italic; }
+.rhero__txt--l { left: 13vw; bottom: 12svh; }
+.rhero__txt--r { right: 10vw; top: 44svh; text-align: right; }
+.rhero__down { position: absolute; left: 13vw; bottom: 5svh; z-index: 3; font-size: 11px; }
+.rhero__down em { font-family: var(--f-disp); font-size: 15px; }
+
+/* ========== 02 1863: göteborg "history / XV" ========== */
+.salon { position: relative; min-height: 100svh; display: grid; grid-template-columns: 34vw 1fr; overflow: hidden; }
+.salon__pic { position: relative; min-height: 100svh; }
+.salon__pic .slot { position: absolute; inset: 0; }
+.salon__word { position: absolute; left: 25vw; top: 21svh; z-index: 2; font-size: clamp(110px, 13vw, 240px); line-height: 1.2; color: var(--red); pointer-events: none; }
+.salon__yr { position: absolute; right: 6vw; top: 14svh; display: flex; font-family: var(--f-disp); font-size: clamp(120px, 19vw, 340px); line-height: .9; color: var(--ink); }
+.salon__yr span { display: inline-block; }
+.salon__txt { grid-column: 2; align-self: end; display: flex; flex-direction: column; gap: 14px; max-width: 520px; margin: 0 0 22svh 12vw; font-size: 12.5px; line-height: 1.75; }
+.salon__count { position: absolute; left: calc(34vw + 12vw); right: 6vw; bottom: 8svh; display: flex; gap: clamp(30px, 5vw, 90px); padding-top: 18px; border-top: 1px solid rgba(29, 17, 16, .2); }
+.salon__count p { display: flex; flex-direction: column; gap: 4px; }
+.salon__count b { font-family: var(--f-disp); font-weight: 400; font-size: clamp(30px, 3vw, 52px); line-height: 1; }
+.salon__count p:nth-child(2) b { color: var(--red); }
+.salon__count small { font-size: 9px; text-transform: uppercase; letter-spacing: .12em; color: var(--mute); }
+
+/* ========== 03 MANET / ABOUT: göteborg "rembrandt / about" ========== */
+.man { position: relative; display: grid; grid-template-columns: 1fr 1fr; min-height: 100svh; background: var(--dark); }
+.man__pic { position: relative; min-height: 100svh; overflow: hidden; }
+.man__pic .slot { position: absolute; inset: 0; }
+.man__pic::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20, 12, 11, .85), rgba(20, 12, 11, 0) 50%); pointer-events: none; }
+.man__name { position: absolute; left: 0; right: 0; bottom: 16svh; z-index: 2; text-align: center; font-size: clamp(60px, 8vw, 140px); line-height: 1; }
+.man__yrs { position: absolute; left: 0; right: 0; bottom: 9svh; z-index: 2; display: flex; justify-content: center; gap: 70px; font-size: 10px; letter-spacing: .1em; }
+.man__yrs span + span::before { content: ''; display: inline-block; width: 40px; height: 1px; margin: 0 15px 0 -55px; vertical-align: middle; background: currentColor; opacity: .6; }
+.man__txt { display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: 14svh 9vw 14svh 6vw; font-size: 12.5px; line-height: 1.8; }
+.man__about { font-size: clamp(34px, 3.2vw, 56px); line-height: 1; margin-bottom: 14px; }
+.man__lead { font-family: var(--f-disp); font-size: clamp(19px, 1.6vw, 26px); line-height: 1.35; color: var(--rose); }
+.man__txt em { font-style: italic; }
+.man__quote { margin-top: 20px; padding: 22px 26px; font-family: var(--f-disp); font-size: 19px; line-height: 1.35; }
+.man__quote cite { display: block; margin-top: 10px; font-family: var(--f-sans); font-style: normal; font-size: 10px; letter-spacing: .08em; color: var(--mute); }
+
+/* ========== 04 THE JURY: stacked canvases, a red wax stamp ========== */
+.jury { position: relative; background: radial-gradient(ellipse 70% 70% at 40% 55%, #3a1512 0%, #1d0e0c 55%, #0f0807 100%); }
+.jury__pin { position: relative; height: 100svh; min-height: 680px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 10vw; overflow: hidden; }
+.jury__head { position: absolute; left: 10vw; top: 12svh; z-index: 4; }
+.jury__title { font-weight: 400; display: flex; align-items: baseline; gap: 18px; line-height: 1; }
+.jury__title .sc { font-size: clamp(28px, 2.6vw, 44px); }
+.jury__title .script { font-size: clamp(80px, 8vw, 150px); color: var(--rose); line-height: .9; }
+.jury__hint { margin-top: 28px; font-size: 11px; color: var(--mute); }
+.jury__stack { position: relative; display: grid; grid-template-rows: 100%; place-items: center; height: 56svh; margin-top: 16svh; }
+.jcard {
+  position: relative; grid-area: 1 / 1; width: auto; height: 100%; aspect-ratio: 3 / 4.1;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, .55); border: 10px solid #2a1a14; outline: 1px solid rgba(214, 168, 78, .45); outline-offset: -4px;
+}
+.jcard .slot { width: 100%; height: 100%; }
+.jcard .slot-label small { display: none; }
+.jcard__stamp {
+  position: absolute; left: 50%; top: 52%; z-index: 3; display: grid; place-items: center; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%;
+  transform: rotate(-14deg) scale(0); opacity: 0;
+  background: radial-gradient(circle at 38% 34%, #c43a2f 0%, #8e1616 46%, #5e0d0d 100%);
+  box-shadow: inset 0 -6px 14px rgba(0, 0, 0, .45), inset 0 5px 10px rgba(255, 170, 150, .3), 0 14px 30px rgba(0, 0, 0, .45);
+  color: #f7d7cf; text-align: center; font-family: var(--f-disp); font-size: 19px; line-height: 1.05; text-transform: uppercase; letter-spacing: .06em;
+}
+.jcard__stamp::before { content: ''; position: absolute; inset: 9px; border-radius: 50%; border: 1px dashed rgba(247, 215, 207, .55); }
+.jcard__stamp small { display: block; margin-top: 6px; font-family: var(--f-sans); font-size: 8px; letter-spacing: .14em; }
+.jcard.is-judged .jcard__stamp { opacity: 1; }
+.jury__side { position: relative; z-index: 4; padding-left: 5vw; margin-top: 8svh; }
+.jury__n { font-size: 10px; letter-spacing: .1em; color: var(--mute); }
+.jury__n b { font-weight: 400; color: var(--bone); }
+.jury__what { margin-top: 12px; font-family: var(--f-disp); font-weight: 400; font-size: clamp(36px, 3.6vw, 64px); line-height: 1.05; }
+.jury__who { margin-top: 8px; font-size: 11px; color: var(--rose); }
+.jury__why { margin-top: 24px; max-width: 34ch; padding: 18px 22px; font-size: 14px; line-height: 1.45; min-height: 96px; }
+.jury__btns { display: flex; gap: 12px; margin-top: 26px; }
+.jury__btn {
+  padding: 14px 26px; border-radius: 999px; border: 1px solid rgba(243, 230, 220, .45); font-family: var(--f-disp); font-size: 17px;
+  transition: background-color .35s, color .35s, border-color .35s;
+}
+.jury__btn:hover { background: var(--bone); color: var(--ink); }
+.jury__btn--no { border-color: var(--red-2); background: var(--red); }
+.jury__btn--no:hover { background: var(--red-2); color: var(--bone); }
+.jury__btn:disabled { opacity: .35; pointer-events: none; }
+.jury__score { margin-top: 18px; font-size: 11px; color: var(--mute); }
+
+/* ========== 05 VICTORINE: göteborg "florence" collage ========== */
+.vic { position: relative; height: max(60vw, 700px); overflow: hidden; }
+.vic > * { position: absolute; }
+.vic .slot { width: 100%; height: 100%; }
+.vic .slot-label small { display: none; }
+.vic__name { left: 8vw; top: 4%; z-index: 2; font-size: clamp(110px, 14vw, 260px); line-height: 1.25; color: var(--red); pointer-events: none; }
+.vic__sur { left: 34vw; top: 31%; font-size: clamp(30px, 3.4vw, 60px); line-height: 1; letter-spacing: .14em; }
+.vic__a { left: 10vw; top: 44%; width: 17vw; aspect-ratio: 3 / 4.3; }
+.vic__b { right: 9vw; top: 9%; width: 20vw; aspect-ratio: 3 / 4.4; }
+.vic__c { left: 36vw; top: 49%; width: 20vw; aspect-ratio: 4 / 3; }
+.vic__yr { left: 31vw; top: 46%; font-family: var(--f-disp); font-size: 15px; letter-spacing: .1em; writing-mode: vertical-rl; transform: rotate(180deg); }
+.vic__txt { right: 9vw; top: 70%; width: min(28vw, 400px); font-size: 12.5px; line-height: 1.75; }
+.vic__label { display: flex; flex-direction: column; gap: 4px; padding: 14px 18px; font-family: var(--f-disp); font-size: 18px; color: var(--ink); left: 21vw; top: 82%; }
+.vic__label small { font-family: var(--f-sans); font-size: 10.5px; color: var(--mute); }
+.vic__label--2 { left: 52vw; top: 86%; }
+
+/* ========== 06 PALAFRENIERI: göteborg cream "about" with the big portrait ========== */
+.pala { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 6vw; min-height: 100svh; padding: 14svh 12vw; background: var(--cream-2); color: var(--ink); }
+.pala__frame { position: relative; aspect-ratio: 3 / 4.2; max-height: 78svh; justify-self: end; height: 78svh; padding: 14px; background: linear-gradient(135deg, #e9c174, #a9772c 40%, #f0cf86 60%, #8d5f20); box-shadow: 0 40px 80px rgba(60, 20, 10, .35); }
+.pala__frame .slot { width: 100%; height: 100%; }
+.pala__seal { position: absolute; right: -22px; top: -22px; display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: var(--red); color: var(--gold-2); font-style: normal; font-size: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, .3); }
+.pala__txt { display: flex; flex-direction: column; gap: 14px; max-width: 460px; font-size: 12.5px; line-height: 1.8; }
+.pala__k { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--rose-2); }
+.pala__title { font-family: var(--f-disp); font-weight: 400; font-size: clamp(44px, 4.6vw, 82px); line-height: 1; }
+.pala__days { font-family: var(--f-script); font-size: clamp(44px, 4vw, 70px); line-height: 1.1; color: var(--red); }
+.pala__days b { font-weight: 400; }
+.pala__back { width: max-content; margin-top: 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(29, 17, 16, .3); font-size: 10.5px; }
+
+/* ========== 07 NEXT WING ========== */
+.next { position: relative; display: flex; flex-direction: column; align-items: center; padding: 16svh 6vw 12svh; overflow: hidden; background: radial-gradient(ellipse 60% 60% at 50% 70%, #33241a 0%, #1a130e 55%, #110c09 100%); }
+.next__k { font-size: 10px; text-transform: uppercase; letter-spacing: .16em; color: var(--mute); }
+.next__arch { width: clamp(220px, 24vw, 380px); height: clamp(320px, 36vw, 560px); margin-top: 30px; }
+.next__word { margin-top: -0.55em; position: relative; z-index: 2; font-size: clamp(110px, 13vw, 240px); line-height: 1.2; color: var(--rose); pointer-events: none; }
+.next__sub { max-width: 40ch; text-align: center; font-size: 12px; color: rgba(243, 230, 220, .75); }
+
+/* reeded glass over the arch, same as the home wings */
+.arch { position: relative; display: block; border-radius: 999px 999px 0 0; overflow: hidden; }
+.arch .slot { width: 100%; height: 100%; }
+.arch .slot-label { text-align: center; align-items: center; padding-bottom: 16px; z-index: 2; }
+.arch .slot-label small { display: none; }
+.arch::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .1) 0 2px, rgba(255, 255, 255, 0) 2px 9px, rgba(0, 0, 0, .08) 9px 11px);
+  backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+  transition: transform 1.1s var(--ease);
+}
+.arch:hover::after { transform: translateY(101%); }
+
+/* ========== responsive ========== */
+@media (max-width: 860px) {
+  .rhero__title { top: 15svh; font-size: 8.4vw; }
+  .rhero__fig { width: 86vw; height: 62svh; }
+  .rhero__pic--l { left: 6vw; top: auto; bottom: 22svh; width: 26vw; }
+  .rhero__pic--r { right: 6vw; top: auto; bottom: 30svh; width: 34vw; }
+  .rhero__txt--r { display: none; }
+  .rhero__txt--l { left: 6vw; right: 6vw; bottom: 9svh; max-width: none; }
+  .rhero__down { left: 6vw; bottom: 3svh; }
+
+  .salon { grid-template-columns: 1fr; }
+  .salon__pic { min-height: 48svh; }
+  .salon__word { left: 6vw; top: 36svh; font-size: 30vw; }
+  .salon__yr { position: relative; right: auto; top: auto; margin: 6svh 0 0 6vw; font-size: 30vw; }
+  .salon__txt { grid-column: 1; margin: 30px 6vw 0; }
+  .salon__count { position: relative; left: auto; right: auto; bottom: auto; margin: 40px 6vw 60px; gap: 24px; }
+
+  .man { grid-template-columns: 1fr; }
+  .man__pic { min-height: 80svh; }
+  .man__txt { padding: 60px 7vw 80px; }
+
+  .jury__pin { grid-template-columns: 1fr; align-content: start; padding: 0 6vw; height: auto; min-height: 100svh; }
+  .jury__head { position: relative; left: auto; top: auto; padding-top: 100px; }
+  .jury__stack { height: 46svh; margin-top: 30px; }
+  .jury__side { padding: 30px 0 60px; margin: 0; }
+
+  .vic { height: auto; padding: 90px 6vw 70px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .vic > * { position: relative; left: auto !important; right: auto !important; top: auto !important; width: auto !important; }
+  .vic__name { grid-column: 1 / -1; font-size: 25vw; }
+  .vic__sur { grid-column: 1 / -1; margin-top: -30px; }
+  .vic__c, .vic__txt, .vic__label { grid-column: 1 / -1; }
+  .vic__yr { display: none; }
+
+  .pala { grid-template-columns: 1fr; padding: 90px 7vw; }
+  .pala__frame { justify-self: center; height: auto; width: 80vw; max-height: none; }
+}
+.jury__again { padding-bottom: 4px; border-bottom: 1px solid var(--rose); font-family: var(--f-disp); font-size: 16px; color: var(--rose); }
